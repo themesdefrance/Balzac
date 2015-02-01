@@ -1,0 +1,13 @@
+.balzacsocial-toggle{
+	display:none;
+}
+.balzacsocial-toggle.open{
+	display:block;
+}
+.balzacsocial-toggle-link{
+	display:block;
+	float:right;
+	background:url("images/arrows.png") no-repeat scroll 6px 0 transparent;
+	width:24px;
+	height:26px;
+}
