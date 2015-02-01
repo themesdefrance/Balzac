@@ -6,7 +6,7 @@
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @since 1.0
  */
-	
+
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
@@ -18,7 +18,7 @@ define('BALZAC_LICENSE_KEY', 'balzac_license_edd');
 
 //Set the content width (in pixels) based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
-	$content_width = 720; 
+	$content_width = 720;
 }
 
 // Include theme updater (relative to licensing)
@@ -99,10 +99,10 @@ if (!function_exists('balzac_setup')){
 
 		// Enable custom title tag for 4.1
 		add_theme_support( 'title-tag' );
-		
+
 		// Enable Feed Links
 		add_theme_support( 'automatic-feed-links' );
-		
+
 		// Enable HTML5 markup
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
@@ -165,7 +165,7 @@ if (!function_exists('balzac_enqueue')){
 
 		wp_register_script('balzac', get_template_directory_uri().'/js/min/balzac.min.js', array('jquery'), false, true);
 
-		wp_enqueue_style( 'balzac-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext');
+		wp_enqueue_style( 'balzac-fonts', '//fonts.googleapis.com/css?family=Open+Sans:600|Tinos:400,700&subset=latin,latin-ext');
 
 		//main stylesheet
 		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), false);
@@ -176,7 +176,7 @@ if (!function_exists('balzac_enqueue')){
 		wp_enqueue_script('fitvids');
 
 		wp_enqueue_script('balzac');
-		
+
 		if ( is_singular() ){
 			wp_enqueue_script( "comment-reply" );
 		}
@@ -238,15 +238,15 @@ add_action('wp_head', 'balzac_custom_styles', 99);
  */
 if(!function_exists('balzac_user_styles')){
 	function balzac_user_styles(){
-		
+
 		// Get the main color defined by the user
 		if (get_option('balzac_color')){
 
 			$color = apply_filters('balzac_color', get_option('balzac_color'));
-			
+
 			// Load color functions
 			require_once 'admin/functions/color-functions.php';
-			
+
 			$hsl = balzac_RGBToHSL(balzac_HTMLToRGB($color));
 			if ($hsl->lightness > 180){
 				$contrast = apply_filters('balzac_color_contrast', '#333');
@@ -260,13 +260,13 @@ if(!function_exists('balzac_user_styles')){
 		}
 		else{
 			// If not, use the default colors
-			$color = '#ff625b';
-			$complement = '#D14949';
+			$color = '#27ae60';
+			$complement = '#1C7E46';
 			$contrast = '#fff';
 		}
 		?>
 			<style type="text/css">
-				
+
 			.site-header .main-menu li:hover > a,
 			.site-header .main-menu li.current-menu-item a,
 			.site-header a.logo-text:hover,
@@ -290,8 +290,8 @@ if(!function_exists('balzac_user_styles')){
 			.post-header-title:before,
 			.widget > h3:before{
 				color: <?php echo $color; ?>;
-			}	
-			
+			}
+
 			.content a:hover,
 			.footer a:hover,
 			.entry-meta a:hover,
@@ -316,7 +316,7 @@ if(!function_exists('balzac_user_styles')){
 			.pagination a:hover{
 				color:<?php echo $contrast; ?>;
 			}
-			
+
 			.button,
 			.comment-form input[type="submit"],
 			html a.button,
@@ -351,8 +351,8 @@ if(!function_exists('balzac_user_styles')){
 			.back-to-top:hover{
 				background: <?php echo $complement; ?>;
 				color: <?php echo $contrast; ?>;
-			}			
-			
+			}
+
 			.widget_tag_cloud a:hover,
 			input[type='text']:focus,
 			input[type='email']:focus,
@@ -375,7 +375,7 @@ add_action('wp_head','balzac_user_styles', 98);
 /**
  * License activation stuff (from Easy Digital Downloads Software Licensing Addon)
  * This function will activate the theme licence on Themes de France
- * 
+ *
  * @since 1.0
  * @return void
  */
@@ -383,10 +383,10 @@ if(!function_exists('balzac_edd')){
 	function balzac_edd(){
 		$license = trim(get_option(BALZAC_LICENSE_KEY));
 		$status = get_option('balzac_license_status');
-		
+
 		// No license is activated yet
 		if (!$status){
-			
+
 			// Activate the license
 			$api_params = array(
 				'edd_action'=>'activate_license',
@@ -395,7 +395,7 @@ if(!function_exists('balzac_edd')){
 			);
 
 			$response = wp_remote_get(add_query_arg($api_params, BALZAC_STORE_URL), array('timeout'=>15, 'sslverify'=>false));
-			
+
 			if (!is_wp_error($response)){
 				$license_data = json_decode(wp_remote_retrieve_body($response));
 				if ($license_data->license === 'valid') update_option('balzac_license_status', true);
@@ -416,7 +416,7 @@ add_action('admin_init', 'balzac_edd');
 
 /**
  * Display an admin notice if the licence isn't activated
- * 
+ *
  * @since 1.0
  * @return void
  */
@@ -424,16 +424,16 @@ if(!function_exists('balzac_admin_notice')){
 	function balzac_admin_notice(){
 		global $current_user;
         $user_id = $current_user->ID;
-		
+
 		if(current_user_can('edit_theme_options')){
-		
+
 			if(!get_option('balzac_license_status')){
-				
+
 				if ( ! get_user_meta($user_id, 'ignore_purchasebalzac_notice') ) {
 					echo '<div class="error"><p>';
-					
+
 						printf(__("To get Balzac support and automatic updates, <a href='%s' target='__blank'>purchase a licence key on Themes de France</a> | <a href='%s'>I'm not interested</a>", 'balzac'), 'https://www.themesdefrance.fr/themes/balzac/#acheter?utm_source=theme&utm_medium=noticelink&utm_campaign=balzac', '?ignore_notice=purchasebalzac');
-					
+
 					echo '</p></div>';
 				}
 			}

@@ -1071,7 +1071,7 @@ table {
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: 'Open Sans', 'sans-serif'; }
+  font-family: 'Tinos', 'sans-serif'; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', 'sans-serif';
@@ -1336,7 +1336,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
         padding: 20px 0; } }
     .site-header .balzac-logo a.logo-text {
       font-size: 26px;
-      color: #38455b;
+      color: #27ae60;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: -1px;
@@ -1350,7 +1350,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       .site-header #toggle-menu-icon {
         z-index: 100;
         display: block;
-        color: #38455b;
+        color: #27ae60;
         font-size: 26px;
         float: right;
         padding: 0;
@@ -1402,7 +1402,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
  }
     .site-header .main-menu a {
       display: inline-block;
-      color: #38455b;
+      color: #27ae60;
       padding: 30px 0px 27px;
       text-decoration: none;
       font-size: 16px; }
@@ -1432,7 +1432,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     display: inline-block;
     width: 100%; }
   .site-header .sub-menu a {
-    color: #38455b;
+    color: #27ae60;
     font-size: 14px;
     padding: 12px 10px 14px 10px;
     transition: 0.2s color ease-out; }
@@ -1448,7 +1448,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   padding: 40px 0;
   font-size: 28px;
   font-weight: bold;
-  color: #38455b;
+  color: #27ae60;
   text-transform: uppercase; }
 .header-bar #site-breadcrumbs {
   margin: -30px 0 50px;
@@ -1507,7 +1507,7 @@ body.admin-bar .site-header {
 
 .footer-bar {
   margin-top: 20px;
-  color: #38455b; }
+  color: #27ae60; }
   .footer-bar .widget {
     border-bottom: none; }
 
@@ -1526,7 +1526,7 @@ body.admin-bar .site-header {
   padding: 20px 0; }
 
 .site-footer a {
-  color: #38455b;
+  color: #27ae60;
   text-decoration: none;
   font-family: 'Open Sans', 'sans-serif';
   font-weight: bold; }
@@ -1637,7 +1637,7 @@ body.admin-bar .site-header {
   opacity: 1; }
 
 .entry-title, .entry-title a {
-  color: #38455b;
+  color: #27ae60;
   text-decoration: none;
   margin-bottom: 10px;
   font-size: 28px;
@@ -1648,7 +1648,7 @@ body.admin-bar .site-header {
 
 /* Quote format */
 .entry-quote {
-  background: #38455b;
+  background: #27ae60;
   margin-bottom: 10px;
   transition: 0.2s background ease-out; }
   .entry-quote a {
@@ -1674,13 +1674,13 @@ body.admin-bar .site-header {
 .single .entry-quote {
   padding: 30px; }
   .single .entry-quote:hover {
-    background: #38455b; }
+    background: #27ae60; }
   .single .entry-quote blockquote {
     padding-bottom: 30px; }
 
 /* Link format */
 .entry-link {
-  background: #38455b;
+  background: #27ae60;
   transition: 0.2s background ease-out; }
   .entry-link a {
     padding: 30px;
@@ -1770,7 +1770,7 @@ body.admin-bar .site-header {
       padding-right: 10px; }
     .entry-content blockquote cite {
       display: block;
-      font-family: 'Open Sans', 'sans-serif';
+      font-family: 'Tinos', 'sans-serif';
       font-size: 16px;
       margin-top: 20px;
       font-style: normal;
@@ -1966,7 +1966,7 @@ body.admin-bar .site-header {
 .widget > h3 {
   font-size: 16px;
   margin-bottom: 15px;
-  color: #38455b;
+  color: #27ae60;
   font-weight: bold;
   text-transform: uppercase; }
 
@@ -2003,8 +2003,8 @@ body.admin-bar .site-header {
 
 .widget_tag_cloud .tagcloud a {
   display: inline-block;
-  color: #38455b;
-  border: 2px solid #38455b;
+  color: #27ae60;
+  border: 2px solid #27ae60;
   padding: 4px 8px;
   margin: 4px 0; }
   .widget_tag_cloud .tagcloud a:hover {
@@ -2033,7 +2033,7 @@ body.admin-bar .site-header {
   height: 100%; }
 
 .widget_rss h3 a {
-  color: #38455b; }
+  color: #27ae60; }
 .widget_rss ul li a.rsswidget {
   display: block;
   margin-bottom: 5px; }
@@ -2065,7 +2065,7 @@ body.admin-bar .site-header {
         text-decoration: none; }
 
 .footer-bar .widget > h3 {
-  color: #38455b; }
+  color: #27ae60; }
 
 .pagination {
   display: inline-block;
