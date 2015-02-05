@@ -14,15 +14,12 @@
 
 .wrapper{
 
-	max-width: 1140px;
+	max-width: 800px;
 	width:94%;
 	margin: 0 auto;
-	
-	@extend .clearfix;	
-	
-	@include width-below(1200px){
-		max-width: 960px;
-	}
+
+	@extend .clearfix;
+
 	@include width-below(960px){
 		max-width: 800px;
 	}
@@ -32,31 +29,109 @@
 	}
 }
 
+.wrapper-media{
+	@extend .wrapper;
+
+	max-width: 960px;
+}
+
 $menu-width: 280px;
 
 .site-header{
 	z-index: $z-menu;
 	width: 100%;
 	font-weight: bold;
-	
+
 	@extend %custom-bg;
 	@extend .clearfix;
-	
+
 	@include width-below($grid-collapse-below){
-		
+
 	}
-	
+
+	.main-menu{
+		width: 100%;
+		font-family: $heading-font;
+		text-align: center;
+		border-bottom:1px solid #ddd;
+
+		@include width-below($grid-collapse-below){
+			text-align: left;
+			float:none;
+			width:100%;
+		}
+
+		ul.top-level-menu{
+			list-style: none;
+			z-index: 10;
+			position: relative;
+
+			@include width-below($grid-collapse-below){
+				float:none;
+				display: none;
+				width:100%;
+				overflow:hidden;
+			}
+
+			@include width-above($grid-collapse-below){
+				display: block !important;
+			}
+		}
+
+		li{
+			display: inline-block;
+			position: relative;
+			padding:0 10px;
+
+			@include width-below($grid-collapse-below){
+				display: block;
+				padding:0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			&:hover {
+				> a{
+					color:$main-color;
+				}
+
+				.sub-menu{
+					display:block;
+				}
+			}
+
+			@include width-above($grid-collapse-below){
+				&.current-menu-item a{
+					color:$main-color;
+				}
+			}
+		}
+
+		a{
+			display: inline-block;
+			color: $heading-font-color;
+			padding:30px 0px 27px;
+			text-decoration: none;
+			font-size: 16px;
+
+			@include width-below($grid-collapse-below){
+				display: block;
+				padding: 20px 0px 17px;
+			}
+		}
+	}
+
 	.balzac-logo{
-		width: 30%;
-		float: left;
-		text-align: left;
-		padding: 20px 0;
-		
+		text-align: center;
+		padding: 70px 0;
+
 		@include width-below($grid-collapse-below){
 			width:100%;
 			padding: 20px 0;
 		}
-		
+
 		a.logo-text{
 			font-size: 26px;
 			color: $heading-font-color;
@@ -66,15 +141,15 @@ $menu-width: 280px;
 			padding: 3px 0;
 			display: inline-block;
 		}
-		
+
 		a.logo-img img{
 			max-height: 35px;
 		}
 	}
-	
+
 	#toggle-menu-icon{
 		display: none;
-		
+
 		@include width-below($grid-collapse-below){
 			z-index: 100;
 			display: block;
@@ -88,81 +163,7 @@ $menu-width: 280px;
 			max-height: 36px;
 			transition: .1s color ease-in;
 		}
-		
-	}
-	
-	.main-menu{
-		width: 70%;
-		float: left;
-		font-family: $heading-font;
-		
-		@include width-below($grid-collapse-below){
-			text-align: left;
-			float:none;
-			width:100%;
-		}
-		
-		ul.top-level-menu{
-			list-style: none;
-			z-index: 10;
-			position: relative;
-			float:right;
-			
-			@include width-below($grid-collapse-below){
-				float:none;
-				display: none;
-				width:100%;
-				overflow:hidden;
-			}
-			
-			@include width-above($grid-collapse-below){
-				display: block !important;
-			}
-		}
-		
-		li{
-			display: inline-block;
-			position: relative;
-			padding:0 10px;
-			
-			@include width-below($grid-collapse-below){
-				display: block;	
-				padding:0;	
-			}
-			
-			&:last-child {
-				padding-right: 0;
-			}
-			
-			&:hover {
-				> a{
-					color:$main-color;
-				}
-				
-				.sub-menu{
-					display:block;
-				}
-			}
-			
-			@include width-above($grid-collapse-below){
-				&.current-menu-item a{
-					color:$main-color;
-				}
-			}
-		}
-		
-		a{
-			display: inline-block;
-			color: $heading-font-color;
-			padding:30px 0px 27px;
-			text-decoration: none;
-			font-size: 16px;
-			
-			@include width-below($grid-collapse-below){
-				display: block;
-				padding: 20px 0px 17px;
-			}
-		}
+
 	}
 }
 
@@ -175,7 +176,7 @@ $menu-width: 280px;
 	display: none;
 	min-width: 200px;
 	border:1px solid rgba(56, 69, 91, 0.1);
-	
+
 	@include width-below($grid-collapse-below){
 		display: block;
 		position: static;
@@ -183,16 +184,16 @@ $menu-width: 280px;
 		border:none;
 		border-left: 2px solid rgba(56, 69, 91, 0.1);
 	}
-	
+
 	li{
 		opacity: 1;
 		display: inline-block;
 		width: 100%;
-		
+
 		&:hover > a{
-			
+
 		}
-		
+
 	}
 	a{
 		color: $heading-font-color;
@@ -204,7 +205,7 @@ $menu-width: 280px;
 .site-header .sub-menu a{
 	@extend %custom-color;
 	font-size: 16px;
-	
+
 	@include width-below($grid-collapse-below){
 		padding-left: 30px;
 		opacity: 1;
@@ -212,7 +213,7 @@ $menu-width: 280px;
 }
 
 .header-bar {
-	
+
 	.header-bar-title {
 		padding: 40px 0;
 		font-size: 28px;
@@ -220,14 +221,14 @@ $menu-width: 280px;
 		color: $heading-font-color;
 		text-transform: uppercase;
 	}
-	
+
 	#site-breadcrumbs {
 		margin: -30px 0 50px;
 		font-size: 14px;
-		
+
 		a{
 			text-decoration:none;
-			
+
 			&:hover{
 				text-decoration:underline;
 			}
@@ -242,7 +243,7 @@ $menu-width: 280px;
 	width: 80%;
 	padding: 4px 4px;
 	border-left: 2px solid #B2B2B2;
-	
+
 	&:focus{
 		background: #fff;
 	}
@@ -258,7 +259,7 @@ $menu-width: 280px;
 	background: none;
 	color: #f1f1f1;
 	font-size: 20px;
-	
+
 	@include width-below($grid-collapse-below){
 		padding-top: 10px;
 		padding-left: 15px;
@@ -275,7 +276,7 @@ body.admin-bar .site-header{
 	border: none;
 	font-size: 30px;
 	display: none;
-	
+
 	@include width-below($grid-collapse-below){
 		display: block;
 	}
@@ -288,19 +289,19 @@ body.admin-bar .site-header{
 
 .footer-wrapper {
 	padding-top: 60px;
-	
+
 	@include width-below($grid-collapse-below){
 		padding-top:0px;
 	}
-	
+
 }
 
 .footer-bar{
 	margin-top: 20px;
 	color: $footer-font-color;
-	
+
 	@extend .clearfix;
-	
+
 	.widget{
 		border-bottom: none;
 	}
@@ -308,7 +309,7 @@ body.admin-bar .site-header{
 
 .footer-bar .widget{
 	@extend %grid-col;
-	
+
 	@include width-above(701px){
 		width: 33.33333333%;
 	}
@@ -329,7 +330,7 @@ body.admin-bar .site-header{
 	text-decoration: none;
 	font-family: $heading-font;
 	font-weight:bold;
-	
+
 	&:hover{
 		text-decoration:underline;
 	}
@@ -341,7 +342,7 @@ body.admin-bar .site-header{
 }
 .site-footer .menu{
 	text-align: right;
-	
+
 	@include width-below($grid-collapse-below){
 		text-align: center;
 		margin-top: 20px;
@@ -361,7 +362,7 @@ body.admin-bar .site-header{
 	right: 0;
 	bottom: 0;
 	padding: 10px;
-	
+
 	&:before{
 		font-size: 22px;
 	}

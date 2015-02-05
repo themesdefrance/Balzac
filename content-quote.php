@@ -16,62 +16,66 @@
 <?php do_action('balzac_before_post'); ?>
 
 <article <?php post_class('post'); ?> itemscope itemtype="http://schema.org/Article">
-	
+
 	<?php do_action('balzac_top_post'); ?>
-	
-	<header class="entry-header">
-		
-		<?php do_action('balzac_top_header_post'); ?>
-		
-		<div class="entry-quote">
-		
-			<?php if (is_single()): ?>
-				
-				<h1 class="entry-title" itemprop="name">
-				
-					<blockquote><?php echo $quote; ?></blockquote>
-					
-				</h1><!--END .entry-title-->
-				
-				<div class="entry-quote-author"><?php echo $author_quote; ?></div>
-				
-			<?php else: ?>
-				
-				<h2 class="entry-title" itemprop="name">
-				
-					<blockquote>
-						
-						<a href="<?php the_permalink(); ?>" title="<?php echo $quote; ?>"><?php echo $quote; ?></a>
-					
-					</blockquote>
-					
-				</h2><!--END .entry-title-->
-				
-				<div class="entry-quote-author">
-				
-					<a href="<?php the_permalink(); ?>" title="<?php echo $quote; ?>">
-						
-						<?php echo $author_quote; ?>
-						
-					</a>
-					
-				</div>
-				
-			<?php endif; ?>			
-			
-		</div><!--END .entry-quote-->
-		
-		<?php get_template_part('content', 'header'); ?>
-		
-		<?php do_action('balzac_bottom_header_post'); ?>
-		
-	</header><!--END .entry-header-->
-		
-	<?php get_template_part('content', 'body'); ?>
 
-	<?php get_template_part('content', 'footer'); ?>
+	<div class="entry-quote">
 
-	<?php do_action('balzac_bottom_post'); ?>
+		<?php if (is_single()): ?>
+
+			<h1 class="entry-title" itemprop="name">
+
+				<blockquote><?php echo $quote; ?></blockquote>
+
+			</h1><!--END .entry-title-->
+
+			<div class="entry-quote-author"><?php echo $author_quote; ?></div>
+
+		<?php else: ?>
+
+			<h2 class="entry-title" itemprop="name">
+
+				<blockquote>
+
+					<a href="<?php the_permalink(); ?>" title="<?php echo $quote; ?>"><?php echo $quote; ?></a>
+
+				</blockquote>
+
+			</h2><!--END .entry-title-->
+
+			<div class="entry-quote-author">
+
+				<a href="<?php the_permalink(); ?>" title="<?php echo $quote; ?>">
+
+					<?php echo $author_quote; ?>
+
+				</a>
+
+			</div>
+
+		<?php endif; ?>
+
+	</div><!--END .entry-quote-->
+
+	<div class="wrapper">
+
+		<header class="entry-header">
+
+			<?php do_action('balzac_top_header_post'); ?>
+
+				<?php get_template_part('content', 'header'); ?>
+
+			<?php do_action('balzac_bottom_header_post'); ?>
+
+		</header><!--END .entry-header-->
+
+		<?php get_template_part('content', 'body'); ?>
+
+		<?php get_template_part('content', 'footer'); ?>
+
+		<?php do_action('balzac_bottom_post'); ?>
+
+	</div><!-- END .wrapper -->
 
 </article><!-- END .post -->
 

@@ -13,12 +13,8 @@
 <?php do_action('balzac_before_post'); ?>
 
 <article <?php post_class('post'); ?> itemscope="itemscope" itemtype="http://schema.org/Article">
-	
+
 	<?php do_action('balzac_top_post'); ?>
-	
-	<header class="entry-header" >
-		
-		<?php do_action('balzac_top_header_post'); ?>
 
 		<?php if (has_post_thumbnail() && !post_password_required()): ?>
 
@@ -42,41 +38,48 @@
 
 		<?php endif; ?>
 
+		<div class="wrapper">
 
-		<?php if (is_single()): ?>
+			<header class="entry-header" >
 
-			<h1 class="entry-title" itemprop="headline">
+			<?php do_action('balzac_top_header_post'); ?>
 
-				<?php the_title(); ?>
+			<?php if (is_single()): ?>
 
-
-			</h1><!--END .entry-title-->
-
-		<?php else: ?>
-
-			<h2 class="entry-title" itemprop="headline">
-
-				<a class="entry-permalink" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" itemprop="url">
+				<h1 class="entry-title" itemprop="headline">
 
 					<?php the_title(); ?>
 
-				</a>
 
-			</h2><!--END .entry-title-->
+				</h1><!--END .entry-title-->
 
-		<?php endif; ?>
+			<?php else: ?>
 
-		<?php get_template_part('content', 'header'); ?>
-		
-		<?php do_action('balzac_bottom_header_post'); ?>
+				<h2 class="entry-title" itemprop="headline">
 
-	</header><!--END .entry-header-->
+					<a class="entry-permalink" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" itemprop="url">
 
-	<?php get_template_part('content', 'body'); ?>
+						<?php the_title(); ?>
 
-	<?php get_template_part('content', 'footer'); ?>
+					</a>
 
-	<?php do_action('balzac_bottom_post'); ?>
+				</h2><!--END .entry-title-->
+
+			<?php endif; ?>
+
+			<?php get_template_part('content', 'header'); ?>
+
+			<?php do_action('balzac_bottom_header_post'); ?>
+
+		</header><!--END .entry-header-->
+
+		<?php get_template_part('content', 'body'); ?>
+
+		<?php get_template_part('content', 'footer'); ?>
+
+		<?php do_action('balzac_bottom_post'); ?>
+
+	</div><!-- END .wrapper -->
 
 </article><!-- END .post -->
 

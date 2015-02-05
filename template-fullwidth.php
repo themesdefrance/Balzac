@@ -8,7 +8,7 @@
  */
 ?>
 
-<?php 
+<?php
 /*
 Template Name: Fullwidth
 */
@@ -19,42 +19,36 @@ __('Fullwidth','balzac');
 
 <?php get_header(); ?>
 
-<?php get_template_part('header', 'bar'); ?>
-
 <?php do_action('balzac_before_main'); ?>
 
 <section class="content">
-	
-	<div class="wrapper">
-		
-		<?php do_action('balzac_top_main'); ?>
-				
-		<main class="main-content col-1-1" role="main" itemprop="mainContentOfPage">
-			
-			<?php
-				
-				if(have_posts()) :
-			
-					while (have_posts()) : the_post();
-	
-						get_template_part('content','page');
-				
-						endwhile;
-			
-				else:
-					
-					get_template_part('content', 'none');
-			
-				endif;
-			?>
-			
-		</main>
-		
-		<?php balzac_posts_nav(false, '', '<div class="pagination">', '</div>'); ?>
-		
-		<?php do_action('balzac_bottom_main'); ?>
-		
-	</div> <!-- END .wrapper -->
+
+	<?php do_action('balzac_top_main'); ?>
+
+	<main class="main-content col-1-1" role="main" itemprop="mainContentOfPage">
+
+		<?php
+
+			if(have_posts()) :
+
+				while (have_posts()) : the_post();
+
+					get_template_part('content','page');
+
+					endwhile;
+
+			else:
+
+				get_template_part('content', 'none');
+
+			endif;
+		?>
+
+	</main>
+
+	<?php balzac_posts_nav(false, '', '<div class="pagination">', '</div>'); ?>
+
+	<?php do_action('balzac_bottom_main'); ?>
 
 </section> <!-- END .content -->
 

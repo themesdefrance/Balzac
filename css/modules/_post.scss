@@ -6,6 +6,7 @@
 .entry-header{
 	margin-bottom: 20px;
 	padding-bottom: 5px;
+	text-align: center;
 }
 
 .page .entry-header{
@@ -77,7 +78,8 @@
 	background: $heading-font-color;
 	margin-bottom:10px;
 	transition:.2s background ease-out;
-	
+	text-align: center;
+
 	a{
 		color:#fff;
 		display:block;
@@ -85,25 +87,25 @@
 		text-decoration:none;
 		transition:.2s color ease-out;
 	}
-	
+
 	&:hover{
 		background: $main-color;
 	}
-	
+
 	.entry-title {
-		
+
 		color:#fff;
 		margin: 0;
-		
+
 		blockquote{
-			
-			a{		
+
+			a{
 				margin-bottom:0;
 				@extend %quote;
 			}
 		}
 	}
-	
+
 	.entry-quote-author{
 		display:block;
 		color:#fff;
@@ -111,19 +113,19 @@
 		a{
 			padding-top: 0;
 		}
-	}	
+	}
 }
 
 .single .entry-quote{
-	
+
 	padding:30px;
-	
+
 	&:hover{
 		background:$heading-font-color;
 	}
-	
+
 	blockquote{
-		
+
 		padding-bottom: 30px;
 		@extend %quote;
 	}
@@ -132,17 +134,18 @@
 /* Link format */
 
 .entry-link{
-	
+
 	background: $heading-font-color;
 	transition:.2s background ease-out;
-	
-	a{	
+	text-align: center;
+
+	a{
 		padding:30px;
 		color:#fff;
 		display: block;
-		
+
 		transition:.2s color ease-out;
-		
+
 		@extend .typcn;
 		&:after{
 			content:'\e09c';
@@ -153,7 +156,7 @@
 .entry-meta{
 	color: #777777;
 	font-size: 14px;
-	
+
 	.updated{
 		display:none;
 	}
@@ -181,11 +184,11 @@
 	img{
 		height:auto;
 	}
-	
+
 	h1,h2,h3,h4,h5,h6{
 		font-weight:bold;
 	}
-	
+
 	h1{
 		font-size: 36px;
 		margin-bottom: 14px;
@@ -216,11 +219,11 @@
 	p{
 		margin-bottom: 10px;
 	}
-	
+
 	ul,ol{
 		padding-left:20px;
 	}
-	
+
 	//no margins for nested lists
 	ul ul,
 	ul ol,
@@ -309,12 +312,13 @@
 
 	.readmore{
 		font-weight: bold;
+		text-align: center;
 	}
 }
 
 .entry-footer{
 	margin-top: 20px;
-	
+
 	&:empty{
 		display:none;
 	}
@@ -324,23 +328,23 @@
 	&:empty{
 		display:none;
 	}
-	
+
 	@extend .clearfix;
 	margin-bottom: 50px;
 	font-weight: bold;
-	
+
 	a{
 		text-decoration:none;
-		
+
 		&:hover{
 			text-decoration:underline;
 		}
 	}
-	
+
 	.meta-nav-prev{
 		float: left;
 	}
-	
+
 	.meta-nav-next{
 		float: right;
 	}

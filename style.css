@@ -1176,7 +1176,7 @@ html {
   font-size: 16px;
   color: #333; }
 
-.clearfix:before, [class*='col-']:before, .wrapper:before, .site-header:before, .footer-bar:before, .post:before, .entry-content:before, .entry-navigation:before, .comment:before, .widget_balzacsocial ul:before, .clearfix:after, [class*='col-']:after, .wrapper:after, .site-header:after, .footer-bar:after, .post:after, .entry-content:after, .entry-navigation:after, .comment:after, .widget_balzacsocial ul:after {
+.clearfix:before, [class*='col-']:before, .wrapper:before, .wrapper-media:before, .site-header:before, .footer-bar:before, .post:before, .entry-content:before, .entry-navigation:before, .comment:before, .widget_balzacsocial ul:before, .clearfix:after, [class*='col-']:after, .wrapper:after, .wrapper-media:after, .site-header:after, .footer-bar:after, .post:after, .entry-content:after, .entry-navigation:after, .comment:after, .widget_balzacsocial ul:after {
   content: " ";
   display: table;
   clear: both; }
@@ -1308,64 +1308,30 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .content {
   padding-bottom: 60px; }
 
-.wrapper {
-  max-width: 1140px;
+.wrapper, .wrapper-media {
+  max-width: 800px;
   width: 94%;
   margin: 0 auto; }
-  @media only screen and (max-width: 1200px) {
-    .wrapper {
-      max-width: 960px; } }
   @media only screen and (max-width: 960px) {
-    .wrapper {
+    .wrapper, .wrapper-media {
       max-width: 800px; } }
   @media only screen and (max-width: 800px) {
-    .wrapper {
+    .wrapper, .wrapper-media {
       width: 100%;
       padding: 0 5%; } }
+
+.wrapper-media {
+  max-width: 960px; }
 
 .site-header {
   z-index: 500;
   width: 100%;
   font-weight: bold; }
-  .site-header .balzac-logo {
-    width: 30%;
-    float: left;
-    text-align: left;
-    padding: 20px 0; }
-    @media only screen and (max-width: 800px) {
-      .site-header .balzac-logo {
-        width: 100%;
-        padding: 20px 0; } }
-    .site-header .balzac-logo a.logo-text {
-      font-size: 26px;
-      color: #27ae60;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      padding: 3px 0;
-      display: inline-block; }
-    .site-header .balzac-logo a.logo-img img {
-      max-height: 35px; }
-  .site-header #toggle-menu-icon {
-    display: none; }
-    @media only screen and (max-width: 800px) {
-      .site-header #toggle-menu-icon {
-        z-index: 100;
-        display: block;
-        color: #27ae60;
-        font-size: 26px;
-        float: right;
-        padding: 0;
-        margin: -2px 0 0 0;
-        cursor: pointer;
-        opacity: 1;
-        max-height: 36px;
-        -webkit-transition: 0.1s color ease-in;
-                transition: 0.1s color ease-in; } }
   .site-header .main-menu {
-    width: 70%;
-    float: left;
-    font-family: 'Open Sans', 'sans-serif'; }
+    width: 100%;
+    font-family: 'Open Sans', 'sans-serif';
+    text-align: center;
+    border-bottom: 1px solid #ddd; }
     @media only screen and (max-width: 800px) {
       .site-header .main-menu {
         text-align: left;
@@ -1374,8 +1340,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     .site-header .main-menu ul.top-level-menu {
       list-style: none;
       z-index: 10;
-      position: relative;
-      float: right; }
+      position: relative; }
       @media only screen and (max-width: 800px) {
         .site-header .main-menu ul.top-level-menu {
           float: none;
@@ -1413,6 +1378,39 @@ img, table, td, blockquote, code, pre, textarea, input, video {
         .site-header .main-menu a {
           display: block;
           padding: 20px 0px 17px; } }
+  .site-header .balzac-logo {
+    text-align: center;
+    padding: 70px 0; }
+    @media only screen and (max-width: 800px) {
+      .site-header .balzac-logo {
+        width: 100%;
+        padding: 20px 0; } }
+    .site-header .balzac-logo a.logo-text {
+      font-size: 26px;
+      color: #27ae60;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      padding: 3px 0;
+      display: inline-block; }
+    .site-header .balzac-logo a.logo-img img {
+      max-height: 35px; }
+  .site-header #toggle-menu-icon {
+    display: none; }
+    @media only screen and (max-width: 800px) {
+      .site-header #toggle-menu-icon {
+        z-index: 100;
+        display: block;
+        color: #27ae60;
+        font-size: 26px;
+        float: right;
+        padding: 0;
+        margin: -2px 0 0 0;
+        cursor: pointer;
+        opacity: 1;
+        max-height: 36px;
+        -webkit-transition: 0.1s color ease-in;
+                transition: 0.1s color ease-in; } }
 
 .site-header .sub-menu {
   position: absolute;
@@ -1605,7 +1603,8 @@ body.admin-bar .site-header {
 
 .entry-header {
   margin-bottom: 20px;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  text-align: center; }
 
 .page .entry-header {
   margin-bottom: 0px;
@@ -1661,7 +1660,8 @@ body.admin-bar .site-header {
   background: #27ae60;
   margin-bottom: 10px;
   -webkit-transition: 0.2s background ease-out;
-          transition: 0.2s background ease-out; }
+          transition: 0.2s background ease-out;
+  text-align: center; }
   .entry-quote a {
     color: #fff;
     display: block;
@@ -1694,7 +1694,8 @@ body.admin-bar .site-header {
 .entry-link {
   background: #27ae60;
   -webkit-transition: 0.2s background ease-out;
-          transition: 0.2s background ease-out; }
+          transition: 0.2s background ease-out;
+  text-align: center; }
   .entry-link a {
     padding: 30px;
     color: #fff;
@@ -1802,7 +1803,8 @@ body.admin-bar .site-header {
     color: #777;
     text-align: center; }
   .entry-content .readmore {
-    font-weight: bold; }
+    font-weight: bold;
+    text-align: center; }
 
 .entry-footer {
   margin-top: 20px; }
