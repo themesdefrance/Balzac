@@ -48,7 +48,7 @@
 .widget > h3{
 	font-size: 16px;
 	margin-bottom: 15px;
-	color:$heading-font-color;
+	color:$custom-font-color;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -104,8 +104,8 @@
 
 .widget_tag_cloud .tagcloud a{
 	display: inline-block;
-	color: $heading-font-color;
-	border:2px solid $heading-font-color;
+	color: $custom-font-color;
+	border:2px solid $custom-font-color;
 	padding: 4px 8px;
 	margin: 4px 0;
 	
@@ -157,7 +157,7 @@
 .widget_rss{
 
 	h3 a{
-		color:$heading-font-color;
+		color:$custom-font-color;
 	}
 
 	ul li a.rsswidget{
@@ -228,6 +228,6 @@
 .footer-bar .widget{
 	
 	> h3{
-		color:$footer-font-color;
+		color:$custom-font-color;
 	}
 }

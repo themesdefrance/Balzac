@@ -40,7 +40,6 @@ $menu-width: 280px;
 .site-header{
 	z-index: $z-menu;
 	width: 100%;
-	font-weight: bold;
 
 	@extend %custom-bg;
 	@extend .clearfix;
@@ -81,7 +80,7 @@ $menu-width: 280px;
 		li{
 			display: inline-block;
 			position: relative;
-			padding:0 10px;
+			margin-right: -4px;
 
 			@include width-below($grid-collapse-below){
 				display: block;
@@ -111,8 +110,8 @@ $menu-width: 280px;
 
 		a{
 			display: inline-block;
-			color: $heading-font-color;
-			padding:30px 0px 27px;
+			color: $main-grey;
+			padding:30px 10px 27px;
 			text-decoration: none;
 			font-size: 16px;
 
@@ -133,11 +132,11 @@ $menu-width: 280px;
 		}
 
 		a.logo-text{
-			font-size: 26px;
-			color: $heading-font-color;
+			font-size: 30px;
+			font-family:$heading-font;
+			color: $main-grey;
 			text-decoration: none;
 			text-transform: uppercase;
-			letter-spacing: -1px;
 			padding: 3px 0;
 			display: inline-block;
 		}
@@ -153,7 +152,7 @@ $menu-width: 280px;
 		@include width-below($grid-collapse-below){
 			z-index: 100;
 			display: block;
-			color:$heading-font-color;
+			color:$custom-font-color;
 			font-size: 26px;
 			float:right;
 			padding:0;
@@ -196,7 +195,7 @@ $menu-width: 280px;
 
 	}
 	a{
-		color: $heading-font-color;
+		color: $custom-font-color;
 		font-size: 14px;
 		padding:12px 10px 14px 10px;
 		transition: .2s color ease-out;
@@ -218,7 +217,7 @@ $menu-width: 280px;
 		padding: 40px 0;
 		font-size: 28px;
 		font-weight: bold;
-		color: $heading-font-color;
+		color: $custom-font-color;
 		text-transform: uppercase;
 	}
 
@@ -298,7 +297,7 @@ body.admin-bar .site-header{
 
 .footer-bar{
 	margin-top: 20px;
-	color: $footer-font-color;
+	color: $custom-font-color;
 
 	@extend .clearfix;
 
@@ -326,7 +325,7 @@ body.admin-bar .site-header{
 	padding: 20px 0;
 }
 .site-footer a{
-	color:$footer-font-color;
+	color:$custom-font-color;
 	text-decoration: none;
 	font-family: $heading-font;
 	font-weight:bold;

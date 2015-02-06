@@ -19,23 +19,23 @@
 .entry-thumbnail{
 	position:relative;
 	overflow:hidden;
-
+	height: 450px;
 	transition: .2s background ease-out;
-
-	img{
-		height:auto;
-		display:block;
-	}
+	
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
 
 	.entry-permalink{
 		display: block;
 		position:relative;
 		overflow: hidden;
-		transition:.2s opacity ease-out;
-
-		img{
-			opacity:1;
-			transition:.2s opacity ease-out;
+		transition:.2s background-color ease-out;
+		width:100%;
+		height:100%;
+		
+		&:hover{
+			background-color: rgba(0, 0, 0, .35);
 		}
 	}
 
@@ -52,7 +52,7 @@
 
 .entry-thumbnail,
 .entry-video{
-	margin-bottom:10px;
+	margin-bottom:30px;
 }
 
 .single .entry-thumbnail:hover img{
@@ -62,11 +62,11 @@
 
 .entry-title,
 .entry-title a{
-	color: $heading-font-color;
+	color: $custom-font-color;
 	text-decoration: none;
-	margin-bottom: 10px;
-	font-size: 28px;
-	line-height:39px;
+	margin-bottom: 20px;
+	font-size: 34px;
+	line-height:47px;
 	letter-spacing: -0.5px;
 	font-weight:bold;
 	transition: color 0.2s ease-out;
@@ -75,7 +75,7 @@
 /* Quote format */
 
 .entry-quote{
-	background: $heading-font-color;
+	background: $custom-font-color;
 	margin-bottom:10px;
 	transition:.2s background ease-out;
 	text-align: center;
@@ -121,7 +121,7 @@
 	padding:30px;
 
 	&:hover{
-		background:$heading-font-color;
+		background:$custom-font-color;
 	}
 
 	blockquote{
@@ -135,7 +135,7 @@
 
 .entry-link{
 
-	background: $heading-font-color;
+	background: $custom-font-color;
 	transition:.2s background ease-out;
 	text-align: center;
 
@@ -155,7 +155,7 @@
 
 .entry-meta{
 	color: #777777;
-	font-size: 14px;
+	font-size: 16px;
 
 	.updated{
 		display:none;
@@ -172,7 +172,7 @@
 }
 .entry-content{
 	@extend .clearfix;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 1.6;
 
 	*{
@@ -311,8 +311,35 @@
 	}
 
 	.readmore{
-		font-weight: bold;
+		font-family:$heading-font;
 		text-align: center;
+		
+		a{
+			display: inline-block;
+			padding: 7px 14px;
+			transition: .2s background-color ease-out;
+			
+			&:after{
+				@extend .typcn;
+				content:'';
+				width:0;
+				opacity:0;
+				padding-left:0px;
+				transition: .2s all ease-out;
+			}
+			
+			&:hover{
+				background-color: #b2b6bc !important;
+				text-decoration:none;
+
+				&:after{
+					opacity:1;
+					width:auto;
+					padding-left:10px;
+					content:'\e049';
+				}
+			}
+		}
 	}
 }
 

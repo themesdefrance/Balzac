@@ -61,7 +61,7 @@
 			}
 		}
 		if($post_header_date || $post_header_author || $post_header_category){
-			echo '| ';
+			echo '- ';
 		}
 		if($post_header_comments){
 
@@ -76,7 +76,7 @@
 			}
 		}
 
-		edit_post_link(__('Edit', 'balzac'), ' | ');
+		edit_post_link(__('Edit', 'balzac'), ' - ');
 	?>
 
 	</div><!--END .entry-meta-->

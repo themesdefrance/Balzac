@@ -107,8 +107,8 @@ if (!function_exists('balzac_setup')){
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
 		// Set images sizes
-		set_post_thumbnail_size('balzac-post-thumbnail', 720, 445, true);
-		add_image_size('balzac-post-thumbnail-full', 1140, 605, true);
+		set_post_thumbnail_size(1920, 454, true);
+		//add_image_size('balzac-post-thumbnail-full', 1920, 454, true);
 
 		// Add Meta boxes for post formats
 		require 'admin/metaboxes/post-formats.php';
@@ -267,8 +267,6 @@ if(!function_exists('balzac_user_styles')){
 		?>
 			<style type="text/css">
 
-			.site-header .main-menu li:hover > a,
-			.site-header .main-menu li.current-menu-item a,
 			.site-header a.logo-text:hover,
 			#site-breadcrumbs a,
 			.entry-meta a,
@@ -277,7 +275,7 @@ if(!function_exists('balzac_user_styles')){
 			.footer a,
 			.footer-wrapper .footer-bar a:hover,
 			.widget_balzacsocial ul li a,
-			.entry-title a:hover,
+			.entry-title a,
 			.entry-meta a,
 			.entry-content a,
 			.entry-footer-meta a,
@@ -308,16 +306,18 @@ if(!function_exists('balzac_user_styles')){
 
 			.entry-thumbnail a.entry-permalink:hover,
 			.entry-thumbnail a.entry-permalink:hover:before,
-			.entry-quote,
+			.entry-quote a,
 			.entry-quote-author,
 			.entry-quote a:hover,
-			.entry-link,
+			.entry-link a,
 			.entry-link a:hover,
 			.pagination a:hover{
 				color:<?php echo $contrast; ?>;
 			}
 
 			.button,
+			.readmore a,
+			.site-header .main-menu li:hover > a,
 			.comment-form input[type="submit"],
 			html a.button,
 			input[type='submit'],
@@ -327,18 +327,19 @@ if(!function_exists('balzac_user_styles')){
 			.widget_calendar #prev a,
 			.widget_balzaccalltoaction a.button,
 			.search-form .submit-btn,
-			.entry-quote:hover,
-			.entry-link:hover,
+			.entry-quote,
+			.entry-link,
 			.entry-thumbnail:hover,
 			.entry-pagination,
 			.pagination span,
 			.pagination a.current,
 			.pagination a:hover,
 			.back-to-top{
-				background: <?php echo $color; ?>;
+				background-color: <?php echo $color; ?>;
 				color: <?php echo $contrast; ?>;
 			}
 			.button:hover,
+			.readmore a:hover,
 			.comment-form input[type="submit"]:hover,
 			html a.button:hover,
 			input[type='submit']:hover,
@@ -347,9 +348,11 @@ if(!function_exists('balzac_user_styles')){
 			.widget_calendar #prev a:hover,
 			.widget_balzaccalltoaction a.button:hover,
 			.search-form .submit-btn:hover,
+			.entry-quote:hover,
+			.entry-link:hover,
 			.entry-pagination:hover,
 			.back-to-top:hover{
-				background: <?php echo $complement; ?>;
+				background-color: <?php echo $complement; ?>;
 				color: <?php echo $contrast; ?>;
 			}
 
@@ -364,6 +367,16 @@ if(!function_exists('balzac_user_styles')){
 			select:focus{
 				border-color:<?php echo $color; ?>;
 				box-shadow: 0 0 5px <?php echo $color; ?>;
+			}
+			
+			<?php 
+			// Get custom background color with opacity
+			$hsl = balzac_RGBToHSL(balzac_HTMLToRGB($color));
+			$custombg = balzac_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness, 0.35);
+			?>
+			
+			.entry-thumbnail a.entry-permalink:hover{
+				background-color: <?php echo $custombg; ?>;
 			}
 
 			</style>

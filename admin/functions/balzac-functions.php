@@ -73,18 +73,16 @@ if (!function_exists('balzac_nomenu')){
 }
 
 /**
- * Display the right post thumbnail whether the sidebar is displayed or not
+ * Get post thumbnail url
  *
  * @since 1.0
  * @return void
  */
-if (!function_exists('balzac_post_thumbnail')){
-	function balzac_post_thumbnail(){
+if (!function_exists('balzac_get_post_thumbnail_url')){
+	function balzac_get_post_thumbnail_url(){
 		
-		if(get_option('balzac_show_sidebar'))
-			the_post_thumbnail('balzac-post-thumbnail');
-		else
-			the_post_thumbnail('balzac-post-thumbnail-full');
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(),'full' );
+		return $thumbnail[0];
 		
 	}
 }

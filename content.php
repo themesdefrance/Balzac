@@ -18,17 +18,13 @@
 
 		<?php if (has_post_thumbnail() && !post_password_required()): ?>
 
-			<div class="entry-thumbnail">
+			<div class="entry-thumbnail" style='background-image: url(<?php echo balzac_get_post_thumbnail_url(); ?>)'>
 
-				<?php if (is_single()): ?>
-
-					<?php balzac_post_thumbnail(); ?>
-
-				<?php else: ?>
+				<?php if (!is_single()): ?>
 
 					<a class="entry-permalink" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" itemprop="url">
 
-						<?php balzac_post_thumbnail(); ?>
+						<?php //the_post_thumbnail(); ?>
 
 					</a>
 
