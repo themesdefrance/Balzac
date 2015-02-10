@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: balzac
 */
-.typcn:before, .entry-link a:before, .typcn:after, .entry-link a:after, .entry-content .readmore a:after {
+.typcn:before, .entry-link a:before, .entry-navigation .meta-nav-prev a:before, .typcn:after, .entry-content .readmore a:after, .entry-navigation .meta-nav-next a:after {
   font-family: 'typicons';
   font-style: normal;
   font-weight: normal;
@@ -1330,7 +1330,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       .site-header .main-menu {
         text-align: left;
         float: none;
-        width: 100%; } }
+        width: 100%;
+        display: none; } }
     .site-header .main-menu ul.top-level-menu {
       list-style: none;
       z-index: 10;
@@ -1365,7 +1366,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     .site-header .main-menu a {
       display: inline-block;
       color: #656d7a;
-      padding: 30px 10px 27px;
+      padding: 30px 15px 27px;
       text-decoration: none;
       font-size: 16px; }
       @media only screen and (max-width: 800px) {
@@ -1389,21 +1390,30 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       display: inline-block; }
     .site-header .balzac-logo a.logo-img img {
       max-height: 35px; }
+  .site-header #toggle-menu-icon, .site-header #toggle-sidebar-icon {
+    position: absolute;
+    z-index: 100;
+    display: block;
+    color: #656d7a;
+    font-size: 32px;
+    padding: 0;
+    margin: -2px 0 0 0;
+    cursor: pointer;
+    opacity: 1;
+    max-height: 36px;
+    transition: 0.1s color ease-in; }
+    .site-header #toggle-menu-icon:before, .site-header #toggle-sidebar-icon:before {
+      padding: 25px 0; }
   .site-header #toggle-menu-icon {
     display: none; }
     @media only screen and (max-width: 800px) {
       .site-header #toggle-menu-icon {
-        z-index: 100;
-        display: block;
-        color: #3ab2a0;
-        font-size: 26px;
-        float: right;
-        padding: 0;
-        margin: -2px 0 0 0;
-        cursor: pointer;
-        opacity: 1;
-        max-height: 36px;
-        transition: 0.1s color ease-in; } }
+        left: 20px;
+        float: left;
+        display: block; } }
+  .site-header #toggle-sidebar-icon {
+    right: 20px;
+    float: right; }
 
 .site-header .sub-menu {
   position: absolute;
@@ -1513,7 +1523,7 @@ body.admin-bar .site-header {
       list-style: none; }
       .footer-wrapper .site-footer .footmenu ul.footer-menu li {
         display: inline-block;
-        margin-left: 14px; }
+        margin: 0 8px; }
     .footer-wrapper .site-footer .footmenu:empty {
       display: none; }
 
@@ -1524,7 +1534,10 @@ body.admin-bar .site-header {
   bottom: 0;
   padding: 10px; }
   .back-to-top:before {
-    font-size: 22px; }
+    font-size: 22px;
+    transform: rotate(-90deg);
+    vertical-align: middle;
+    line-height: 24px; }
 
 .search-form {
   position: relative;
@@ -1655,12 +1668,14 @@ body.admin-bar .site-header {
   transition: 0.2s background ease-out;
   text-align: center; }
   .entry-link a {
-    padding: 30px;
+    padding: 40px 0 50px;
     color: #fff;
     display: block;
     transition: 0.2s color ease-out; }
-    .entry-link a:after {
-      content: '\e09c'; }
+    .entry-link a:before {
+      content: '\e09b';
+      display: block;
+      margin: 0 auto 10px; }
 
 .entry-meta {
   color: #777777;
@@ -1791,18 +1806,21 @@ body.admin-bar .site-header {
     display: none; }
 
 .entry-navigation {
-  margin-bottom: 50px;
-  font-weight: bold; }
+  font-family: 'Open Sans', 'sans-serif';
+  margin-bottom: 50px; }
   .entry-navigation:empty {
     display: none; }
   .entry-navigation a {
+    padding: 10px;
     text-decoration: none; }
-    .entry-navigation a:hover {
-      text-decoration: underline; }
   .entry-navigation .meta-nav-prev {
     float: left; }
+    .entry-navigation .meta-nav-prev a:before {
+      content: '\e047'; }
   .entry-navigation .meta-nav-next {
     float: right; }
+    .entry-navigation .meta-nav-next a:after {
+      content: '\e049'; }
 
 .comments-title {
   padding: 0 0 40px;

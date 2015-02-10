@@ -21,7 +21,7 @@
 	overflow:hidden;
 	height: 450px;
 	transition: .2s background ease-out;
-	
+
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position:center;
@@ -33,7 +33,7 @@
 		transition:.2s background-color ease-out;
 		width:100%;
 		height:100%;
-		
+
 		&:hover{
 			background-color: rgba(0, 0, 0, .35);
 		}
@@ -111,7 +111,7 @@
 		color:#fff;
 		font-style:italic;
 		font-size:20px;
-		
+
 		a{
 			padding:0 0 50px;
 
@@ -143,15 +143,17 @@
 	text-align: center;
 
 	a{
-		padding:30px;
+		padding:40px 0 50px;
 		color:#fff;
 		display: block;
 
 		transition:.2s color ease-out;
 
-		@extend .typcn;
-		&:after{
-			content:'\e09c';
+		&:before{
+			@extend .typcn;
+			content:'\e09b';
+			display:block;
+			margin:0 auto 10px;
 		}
 	}
 }
@@ -318,15 +320,15 @@
 	.readmore{
 		font-family:$heading-font;
 		text-align: center;
-		
-		
+
+
 		a{
 			display: inline-block;
 			font-size: 18px;
 			margin-top: 40px;
 			padding: 7px 14px;
 			transition: .2s background-color ease-out;
-			
+
 			&:after{
 				@extend .typcn;
 				content:'';
@@ -335,7 +337,7 @@
 				padding-left:0px;
 				transition: .2s all ease-out;
 			}
-			
+
 			&:hover{
 				background-color: #b2b6bc !important;
 				text-decoration:none;
@@ -365,22 +367,34 @@
 	}
 
 	@extend .clearfix;
+
+	font-family:$heading-font;
 	margin-bottom: 50px;
-	font-weight: bold;
 
 	a{
+		padding: 10px;
 		text-decoration:none;
 
 		&:hover{
-			text-decoration:underline;
+			@extend %custom-bg;
 		}
 	}
 
 	.meta-nav-prev{
 		float: left;
+
+		a:before{
+			@extend .typcn;
+			content:'\e047';
+		}
 	}
 
 	.meta-nav-next{
 		float: right;
+
+		a:after{
+			@extend .typcn;
+			content:'\e049';
+		}
 	}
 }

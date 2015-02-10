@@ -284,7 +284,6 @@ if(!function_exists('balzac_user_styles')){
 			.footer a:hover,
 			.entry-meta a:hover,
 			.entry-content a:hover,
-			.entry-navigation a:hover,
 			.entry-footer-meta a:hover,
 			.comment-author a:hover,
 			.comment-reply-link:hover,
@@ -320,7 +319,7 @@ if(!function_exists('balzac_user_styles')){
 			.entry-quote,
 			.entry-link,
 			.entry-thumbnail:hover,
-			.entry-pagination,
+			.entry-navigation a:hover,
 			.pagination span,
 			.pagination a.current,
 			.pagination a:hover,
@@ -358,13 +357,13 @@ if(!function_exists('balzac_user_styles')){
 				border-color:<?php echo $color; ?>;
 				box-shadow: 0 0 5px <?php echo $color; ?>;
 			}
-			
-			<?php 
+
+			<?php
 			// Get custom background color with opacity
 			$hsl = balzac_RGBToHSL(balzac_HTMLToRGB($color));
 			$custombg = balzac_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness, 0.35);
 			?>
-			
+
 			.entry-thumbnail a.entry-permalink:hover{
 				background-color: <?php echo $custombg; ?>;
 			}

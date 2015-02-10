@@ -26,7 +26,7 @@
 
 				<a href="<?php echo $link; ?>" title="<?php the_title_attribute(); ?>" rel="external" target="_blank">
 
-					<?php the_title(); ?>
+					<?php echo $link; ?>
 
 				</a>
 
@@ -38,7 +38,7 @@
 
 				<a href="<?php echo $link; ?>" title="<?php the_title_attribute(); ?>" rel="external" target="_blank">
 
-					<?php the_title(); ?>
+					<?php echo $link; ?>
 
 				</a>
 
