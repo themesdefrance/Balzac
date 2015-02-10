@@ -1,6 +1,7 @@
 .pagination{
-	display: inline-block;
-	margin: 20px 0;
+	display: block;
+	margin: 20px 0 60px;
+	text-align: center;
 	
 	> span,
 	> a,
@@ -8,15 +9,16 @@
 		@extend %custom-bg;
 		
 		display: inline-block;
-		color: inherit;
+		color: #fff;
+		background-color:#b2b6bc;
 		text-decoration: none;
-		padding: 4px 10px;
+		padding: 6px 0px;
 		font-family: $heading-font;
 		font-size: 18px;
 		font-weight:bold;
-		width: 30px;
+		width: 2em;
 		text-align: center;
-		
+		margin: 0 2px;
 		i:before{
 			width: auto;
 			height: auto;

@@ -1176,7 +1176,7 @@ html {
   font-size: 16px;
   color: #333; }
 
-.clearfix:before, [class*='col-']:before, .wrapper:before, .wrapper-media:before, .site-header:before, .footer-bar:before, .post:before, .entry-content:before, .entry-navigation:before, .comment:before, .widget_balzacsocial ul:before, .clearfix:after, [class*='col-']:after, .wrapper:after, .wrapper-media:after, .site-header:after, .footer-bar:after, .post:after, .entry-content:after, .entry-navigation:after, .comment:after, .widget_balzacsocial ul:after {
+.clearfix:before, [class*='col-']:before, .content:before, .wrapper:before, .wrapper-media:before, .site-header:before, .post:before, .entry-content:before, .entry-navigation:before, .comment:before, .widget_balzacsocial ul:before, .clearfix:after, [class*='col-']:after, .content:after, .wrapper:after, .wrapper-media:after, .site-header:after, .post:after, .entry-content:after, .entry-navigation:after, .comment:after, .widget_balzacsocial ul:after {
   content: " ";
   display: table;
   clear: both; }
@@ -1241,7 +1241,7 @@ html {
 	@extend .clearfix;
 	//margin-left: - $grid-gutters !important;
 }*/
-[class*='col-'], .footer-bar .widget {
+[class*='col-'] {
   float: left;
   padding-right: 40px; }
 
@@ -1304,9 +1304,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   position: relative;
   overflow: hidden;
   width: 100%; }
-
-.content {
-  padding-bottom: 60px; }
 
 .wrapper, .wrapper-media {
   max-width: 800px;
@@ -1501,56 +1498,28 @@ body.admin-bar .site-header {
   padding-top: 0; }
 
 .footer-wrapper {
-  padding-top: 60px; }
-  @media only screen and (max-width: 800px) {
-    .footer-wrapper {
-      padding-top: 0px; } }
-
-.footer-bar {
-  margin-top: 20px;
-  color: #3ab2a0; }
-  .footer-bar .widget {
-    border-bottom: none; }
-
-@media only screen and (min-width: 701px) {
-  .footer-bar .widget {
-    width: 33.33333333%; } }
-@media only screen and (max-width: 700px) {
-  .footer-bar .widget {
-    width: 50%; } }
-@media only screen and (max-width: 800px) {
-  .footer-bar .widget {
-    width: 100%; } }
-
-.site-footer {
-  margin: 40px auto 0;
-  padding: 20px 0; }
-
-.site-footer a {
-  color: #3ab2a0;
-  text-decoration: none;
-  font-family: 'Open Sans', 'sans-serif';
-  font-weight: bold; }
-  .site-footer a:hover {
-    text-decoration: underline; }
-
-@media only screen and (max-width: 800px) {
-  .site-footer .footnote {
-    text-align: center; } }
-
-.site-footer .menu {
-  text-align: right; }
-  @media only screen and (max-width: 800px) {
-    .site-footer .menu {
-      text-align: center;
-      margin-top: 20px; } }
-
-.site-footer .menu ul {
-  list-style: none; }
-
-.site-footer .menu li {
-  display: inline-block;
-  margin-left: 14px; }
+  font-family: 'Open Sans', 'sans-serif'; }
+  .footer-wrapper .site-footer {
+    padding: 30px 0;
+    text-align: center; }
+    .footer-wrapper .site-footer .footnote {
+      border-top: 1px solid #ddd;
+      padding-top: 30px; }
+    .footer-wrapper .site-footer a {
+      color: #3ab2a0;
+      text-decoration: none;
+      font-family: 'Open Sans', 'sans-serif';
+      font-weight: bold; }
+      .footer-wrapper .site-footer a:hover {
+        text-decoration: underline; }
+    .footer-wrapper .site-footer .footmenu ul.footer-menu {
+      margin-top: 20px;
+      list-style: none; }
+      .footer-wrapper .site-footer .footmenu ul.footer-menu li {
+        display: inline-block;
+        margin-left: 14px; }
+    .footer-wrapper .site-footer .footmenu:empty {
+      display: none; }
 
 .back-to-top {
   border: none;
@@ -1598,10 +1567,10 @@ body.admin-bar .site-header {
   background: none; }
 
 .post {
-  margin-bottom: 50px; }
+  margin-bottom: 70px; }
 
 .entry-header {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding-bottom: 5px;
   text-align: center; }
 
@@ -1648,9 +1617,9 @@ body.admin-bar .site-header {
   color: #3ab2a0;
   text-decoration: none;
   margin-bottom: 20px;
-  font-size: 34px;
+  font-size: 36px;
   line-height: 47px;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
   font-weight: bold;
   -webkit-transition: color 0.2s ease-out;
           transition: color 0.2s ease-out; }
@@ -1665,7 +1634,7 @@ body.admin-bar .site-header {
   .entry-quote a {
     color: #fff;
     display: block;
-    padding: 30px;
+    padding: 50px 30px 30px;
     text-decoration: none;
     -webkit-transition: 0.2s color ease-out;
             transition: 0.2s color ease-out; }
@@ -1679,9 +1648,10 @@ body.admin-bar .site-header {
   .entry-quote .entry-quote-author {
     display: block;
     color: #fff;
-    font-style: italic; }
+    font-style: italic;
+    font-size: 20px; }
     .entry-quote .entry-quote-author a {
-      padding-top: 0; }
+      padding: 0 0 50px; }
 
 .single .entry-quote {
   padding: 30px; }
@@ -1707,7 +1677,8 @@ body.admin-bar .site-header {
 
 .entry-meta {
   color: #777777;
-  font-size: 16px; }
+  font-size: 15px;
+  font-family: 'Open Sans', 'sans-serif'; }
   .entry-meta .updated {
     display: none; }
 
@@ -1718,7 +1689,8 @@ body.admin-bar .site-header {
 
 .entry-content {
   font-size: 20px;
-  line-height: 1.6; }
+  line-height: 1.6;
+  text-align: justify; }
   .entry-content * {
     max-width: 100%;
     -ms-word-wrap: break-word;
@@ -1807,6 +1779,8 @@ body.admin-bar .site-header {
     text-align: center; }
     .entry-content .readmore a {
       display: inline-block;
+      font-size: 18px;
+      margin-top: 40px;
       padding: 7px 14px;
       -webkit-transition: 0.2s background-color ease-out;
               transition: 0.2s background-color ease-out; }
@@ -2104,18 +2078,21 @@ body.admin-bar .site-header {
   color: #3ab2a0; }
 
 .pagination {
-  display: inline-block;
-  margin: 20px 0; }
+  display: block;
+  margin: 20px 0 60px;
+  text-align: center; }
   .pagination > span, .pagination > a, .pagination > i.nothere {
     display: inline-block;
-    color: inherit;
+    color: #fff;
+    background-color: #b2b6bc;
     text-decoration: none;
-    padding: 4px 10px;
+    padding: 6px 0px;
     font-family: 'Open Sans', 'sans-serif';
     font-size: 18px;
     font-weight: bold;
-    width: 30px;
-    text-align: center; }
+    width: 2em;
+    text-align: center;
+    margin: 0 2px; }
     .pagination > span i:before, .pagination > a i:before, .pagination > i.nothere i:before {
       width: auto;
       height: auto; }

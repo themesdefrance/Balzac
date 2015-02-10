@@ -11,22 +11,12 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
 			<section class="footer-wrapper">
-					
-				<div class="wrapper">
-				
-					<div class="footer-bar">
-						
-						<?php dynamic_sidebar('footer'); ?>
-			
-					</div><!-- END .footerbar -->
-					
-				</div><!-- END .wrapper -->
 				
 				<footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 					
 					<div class="wrapper">
 							
-						<div class="footnote col-1-2">
+						<div class="footnote">
 							
 							<?php
 								if(get_option("balzac_footer_left")):
@@ -37,19 +27,19 @@
 									printf(__('<strong>%s</strong> - Balzac by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'balzac'),date('Y'));
 								endif;
 							 ?>
-						</div><!-- END .footnote .col-1-2 -->
+						</div><!-- END .footnote -->
 						
-						<div class="menu col-1-2">
+						<div class="footmenu">
 							<?php
 								wp_nav_menu(array(
 									'theme_location' => 'footer',
-									'menu_class'     => 'top-level-menu',
+									'menu_class'     => 'footer-menu',
 									'container'      => false,
 									'depth'          => 1,
 									'fallback_cb'    => ''
 								));
 							?>
-						</div><!-- END .menu .col-1-2 -->
+						</div><!-- END .menu -->
 					
 					</div><!-- END .wrapper -->
 					
