@@ -155,7 +155,7 @@ if (!function_exists('balzac_enqueue')){
 
 		wp_register_script('balzac', get_template_directory_uri().'/js/min/balzac.min.js', array('jquery'), false, true);
 
-		wp_enqueue_style( 'balzac-fonts', '//fonts.googleapis.com/css?family=Open+Sans:600|Tinos:400,700&subset=latin,latin-ext');
+		wp_enqueue_style( 'balzac-fonts', '//fonts.googleapis.com/css?family=Open+Sans:600|PT+Sans:400,700&subset=latin,latin-ext');
 
 		//main stylesheet
 		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), false);

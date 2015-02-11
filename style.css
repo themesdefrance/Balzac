@@ -1071,7 +1071,7 @@ table {
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: 'Tinos', 'sans-serif'; }
+  font-family: 'PT Sans', 'sans-serif'; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', 'sans-serif';
@@ -1774,7 +1774,7 @@ body.admin-bar .site-header {
       padding-right: 10px; }
     .entry-content blockquote cite {
       display: block;
-      font-family: 'Tinos', 'sans-serif';
+      font-family: 'PT Sans', 'sans-serif';
       font-size: 16px;
       margin-top: 20px;
       font-style: normal;
@@ -1839,6 +1839,12 @@ body.admin-bar .site-header {
     .entry-navigation .meta-nav-next a:after {
       content: '\e049'; }
 
+.entry-comments {
+  font-family: 'Open Sans', 'sans-serif'; }
+  .entry-comments .wrapper, .entry-comments .wrapper-media {
+    background-color: #f7f7f7;
+    padding: 50px 50px 0; }
+
 .comments-title {
   padding: 0 0 40px;
   font-weight: bold; }
@@ -1862,7 +1868,8 @@ body.admin-bar .site-header {
   max-width: none;
   line-height: 1.6;
   padding: 10px 15px;
-  background: #F1F1F1;
+  color: #bbbbbb;
+  background: #fdfdfd;
   border: none; }
 
 .comment-form .comment-form-comment {
@@ -1872,7 +1879,8 @@ body.admin-bar .site-header {
   position: relative;
   z-index: 100;
   width: 100%;
-  background: #F1F1F1;
+  color: #bbbbbb;
+  background: #fdfdfd;
   border: none;
   margin: 0;
   padding: 10px 15px;

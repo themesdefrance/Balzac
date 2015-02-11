@@ -1,5 +1,10 @@
 .entry-comments{
+	font-family:$heading-font;
 	
+	.wrapper{
+		background-color:#f7f7f7;
+		padding:50px 50px 0;
+	}
 }
 
 .comments-title{
@@ -31,7 +36,8 @@
 	max-width:none;
 	line-height:1.6;
 	padding: 10px 15px;
-	background: #F1F1F1;
+	color:#bbbbbb;
+	background: #fdfdfd;
 	border: none;
 }
 .comment-form .comment-form-comment{
@@ -41,7 +47,8 @@
 	position: relative;
 	z-index: 100;
 	width: 100%;
-	background: #F1F1F1;
+	color:#bbbbbb;
+	background: #fdfdfd;
 	border: none;
 	margin:0;
 	padding: 10px 15px;
