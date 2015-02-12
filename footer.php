@@ -49,9 +49,9 @@
 
 			</section> <!-- END .footer-wrapper -->
 		
-		<?php get_sidebar(); ?>
-		
 	</div> <!-- END .page-wrapper -->
+
+	<?php get_sidebar(); ?>
 
 	<?php wp_footer(); ?>
 
