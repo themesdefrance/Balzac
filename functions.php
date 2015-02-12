@@ -73,11 +73,11 @@ if (!function_exists('balzac_setup')){
 			'footer' => __('Footer menu', 'balzac'),
 		) );
 
-		// Register sidebars
+		// Register sidebar
 		register_sidebar(array(
 			'name'          => __('Sidebar', 'balzac'),
-			'id'            => 'blog',
-			'description'   => __('Add widgets in the sidebar.', 'balzac'),
+			'id'            => 'hidden',
+			'description'   => __('Add widgets in the hidden right sidebar.', 'balzac'),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3>',
@@ -98,7 +98,7 @@ if (!function_exists('balzac_setup')){
 
 		// Set images sizes
 		set_post_thumbnail_size(1920, 454, true);
-		//add_image_size('balzac-post-thumbnail-full', 1920, 454, true);
+		add_image_size('balzac-post-thumbnail', 720, 445, true);
 
 		// Add Meta boxes for post formats
 		require 'admin/metaboxes/post-formats.php';
@@ -117,7 +117,6 @@ add_action('after_setup_theme', 'balzac_setup');
 if (!function_exists('balzac_image_size_names_choose')){
 	function balzac_image_size_names_choose($sizes) {
 		$added = array('balzac-post-thumbnail'=>__('Post width', 'balzac'));
-		$added = array('balzac-post-thumbnail-full'=>__('Fullpage width', 'balzac'));
 		$newsizes = array_merge($sizes, $added);
 		return $newsizes;
 	}

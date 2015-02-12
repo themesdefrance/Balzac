@@ -48,8 +48,10 @@
 				<button id="back-to-top" title="<?php _e('Back to the top', 'balzac'); ?>" class="back-to-top typcn typcn-chevron-right"></button>
 
 			</section> <!-- END .footer-wrapper -->
-
-	</div> <!-- END .site-wrapper -->
+		
+		<?php get_sidebar(); ?>
+		
+	</div> <!-- END .page-wrapper -->
 
 	<?php wp_footer(); ?>
 
