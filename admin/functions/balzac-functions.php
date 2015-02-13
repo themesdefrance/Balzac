@@ -411,13 +411,27 @@ if (!function_exists('balzac_archives')){
  * @since 1.0
  * @return void
  */
-if(!function_exists('balzac_chromeframe_notice')){
-	function balzac_chromeframe_notice(){ ?>
+if(!function_exists('tdf_chromeframe_notice')){
+	function tdf_chromeframe_notice(){ ?>
 		<!--[if lt IE 8]><p class='chromeframe'><?php _e('Your browser is <em>too old !','toutatis'); ?></em> <a href="http://browsehappy.com/"><?php _e('Update your browser','toutatis'); ?></a> <?php _e('or','toutatis'); ?> <a href="http://www.google.com/chromeframe/?redirect=true"><?php _e('Install Google Chrome Frame','toutatis'); ?></a> <?php _e('to display this website correctly','toutatis'); ?>.</p><![endif]-->
 	<?php
 	}
 }
-add_action('balzac_body_top','balzac_chromeframe_notice');
+add_action('balzac_body_top','tdf_chromeframe_notice');
+
+/**
+ * Hide h1 tag from TinyMCE editor in order to preserve SEO
+ *
+ * @since 1.0
+ * @return void
+ */
+if(!function_exists('tdf_chromeframe_notice')){
+	function tdf_hide_tinymce_h1_tag($arr){
+	    $arr['block_formats'] = 'Paragraph=p;Pre=pre;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6';
+	    return $arr;
+	}
+}
+add_filter('tiny_mce_before_init', 'tdf_hide_tinymce_h1_tag');
 
 /**
  * Add content for the bbPress Addon in the theme options' Addons tab
