@@ -1236,10 +1236,6 @@ html {
     page-break-after: avoid; }
  }
 
-/*.grid{
-	@extend .clearfix;
-	//margin-left: - $grid-gutters !important;
-}*/
 [class*='col-'] {
   float: left;
   padding-right: 40px; }
@@ -1272,10 +1268,7 @@ html {
   [class*='col-'] {
     width: 100%;
     padding-right: 0; }
-
-  /*.grid{
-		margin-left: 0 !important;
-	}*/ }
+ }
 
 img, table, td, blockquote, code, pre, textarea, input, video {
   max-width: 100%; }
@@ -1325,7 +1318,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .site-header {
   z-index: 500;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 1px solid #ddd; }
   .site-header .main-menu {
     width: 100%;
     font-family: 'Open Sans', 'sans-serif';
@@ -1364,10 +1358,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
         color: #ff625b; }
       .site-header .main-menu li:hover .sub-menu {
         display: block; }
-      @media only screen and (min-width: 800px) {
-        .site-header .main-menu li.current-menu-item a {
-          color: #ff625b; }
- }
     .site-header .main-menu a {
       display: inline-block;
       color: #656d7a;
@@ -1380,18 +1370,18 @@ img, table, td, blockquote, code, pre, textarea, input, video {
           padding: 20px 0px 17px; } }
   .site-header .balzac-logo {
     text-align: center;
-    padding: 70px 0; }
+    padding: 80px 0; }
     @media only screen and (max-width: 800px) {
       .site-header .balzac-logo {
         width: 100%;
         padding: 20px 0; } }
     .site-header .balzac-logo a.logo-text {
-      font-size: 30px;
+      font-size: 32px;
       font-family: 'Open Sans', 'sans-serif';
       color: #656d7a;
       text-decoration: none;
       text-transform: uppercase;
-      padding: 3px 0;
+      padding: 10px;
       display: inline-block; }
     .site-header .balzac-logo a.logo-img img {
       max-height: 35px; }
@@ -1641,7 +1631,6 @@ body.admin-bar .site-header {
   text-align: center; }
 
 .page .entry-header {
-  margin-bottom: 0px;
   padding-bottom: 0px; }
 
 /* Classic thumbnails */
@@ -1668,22 +1657,24 @@ body.admin-bar .site-header {
       filter: blur(1.5px);
       opacity: 0.5; }
 
-.entry-thumbnail, .entry-video {
-  margin-bottom: 30px; }
-
+/*.entry-thumbnail,
+.entry-video{
+	margin-bottom:30px;
+}*/
 .single .entry-thumbnail:hover img {
   filter: none;
   opacity: 1; }
 
-.entry-title, .entry-title a {
-  color: #3ab2a0;
-  text-decoration: none;
-  margin-bottom: 20px;
+.entry-title {
+  margin: 40px 0 20px;
   font-size: 36px;
   line-height: 47px;
   letter-spacing: -1px;
-  font-weight: bold;
-  transition: color 0.2s ease-out; }
+  font-weight: bold; }
+  .entry-title a {
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+    color: #3ab2a0; }
 
 /* Quote format */
 .entry-quote {
@@ -1945,14 +1936,14 @@ body.admin-bar .site-header {
   font-family: 'Open Sans', 'sans-serif'; }
   .entry-comments .wrapper, .entry-comments .wrapper-media {
     background-color: #f7f7f7;
-    padding: 50px 50px 0; }
+    padding: 50px; }
 
 .comments-title {
   padding: 0 0 40px;
   font-weight: bold; }
 
 .comment-form {
-  margin: 20px 0; }
+  margin: 20px 0 0; }
 
 .comment-form > p {
   position: relative;

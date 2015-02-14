@@ -16,39 +16,47 @@
 	
 	<?php do_action('balzac_top_page'); ?>
 	
-	<header class="entry-header" >
-		
-		<?php do_action('balzac_top_header_page'); ?>
-					
-		<?php if (has_post_thumbnail() && !post_password_required()): ?>
-		
-			<div class="entry-thumbnail">
+	<div class="wrapper">
+	
+		<header class="entry-header" >
+			
+			<?php do_action('balzac_top_header_page'); ?>
+						
+			<?php if (has_post_thumbnail() && !post_password_required()): ?>
+			
+				<div class="entry-thumbnail">
+	
+					<?php balzac_post_thumbnail(); ?>
+						
+				</div><!--END .entry-thumbnail-->
+				
+			<?php endif; ?>
+				
+				<h1 class="entry-title" itemprop="headline">
 
-				<?php balzac_post_thumbnail(); ?>
-					
-			</div><!--END .entry-thumbnail-->
-			
-		<?php endif; ?>
-			
-			<?php // The page title is displayed in header-bar.php ?>
-			
-		<?php do_action('balzac_bottom_header_page'); ?>
-		
-	</header><!--END .entry-header-->
-	
-	<?php do_action('balzac_before_content'); ?>
-	
-	<div class="entry-content" itemprop="articleBody">
-		
-		<?php do_action('balzac_top_content'); ?>
-		
-		<?php the_content(); ?>
-		
-		<?php do_action('balzac_bottom_content'); ?>
+					<?php the_title(); ?>
 
-	</div><!--END .entry-content-->
+				</h1><!--END .entry-title-->
+				
+			<?php do_action('balzac_bottom_header_page'); ?>
+			
+		</header><!--END .entry-header-->
+		
+		<?php do_action('balzac_before_content'); ?>
+		
+		<div class="entry-content" itemprop="articleBody">
+			
+			<?php do_action('balzac_top_content'); ?>
+			
+			<?php the_content(); ?>
+			
+			<?php do_action('balzac_bottom_content'); ?>
 	
-	<?php do_action('balzac_after_content'); ?>
+		</div><!--END .entry-content-->
+		
+		<?php do_action('balzac_after_content'); ?>
+	
+	</div>
 	
 	<?php do_action('balzac_bottom_page'); ?>
 	

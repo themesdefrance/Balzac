@@ -46,7 +46,6 @@
 
 					<?php the_title(); ?>
 
-
 				</h1><!--END .entry-title-->
 
 			<?php else: ?>

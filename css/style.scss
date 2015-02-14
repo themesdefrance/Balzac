@@ -48,7 +48,8 @@ $menu-width: 280px;
 .site-header{
 	z-index: $z-menu;
 	width: 100%;
-
+	border-bottom: 1px solid #ddd;
+	
 	@extend %custom-bg;
 	@extend .clearfix;
 
@@ -109,12 +110,6 @@ $menu-width: 280px;
 					display:block;
 				}
 			}
-
-			@include width-above($grid-collapse-below){
-				&.current-menu-item a{
-					color:$main-color;
-				}
-			}
 		}
 
 		a{
@@ -133,7 +128,7 @@ $menu-width: 280px;
 
 	.balzac-logo{
 		text-align: center;
-		padding: 70px 0;
+		padding: 80px 0;
 
 		@include width-below($grid-collapse-below){
 			width:100%;
@@ -141,12 +136,12 @@ $menu-width: 280px;
 		}
 
 		a.logo-text{
-			font-size: 30px;
+			font-size: 32px;
 			font-family:$heading-font;
 			color: $main-grey;
 			text-decoration: none;
 			text-transform: uppercase;
-			padding: 3px 0;
+			padding:10px;
 			display: inline-block;
 		}
 

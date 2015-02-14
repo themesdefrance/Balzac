@@ -10,7 +10,6 @@
 }
 
 .page .entry-header{
-	margin-bottom:0px;
 	padding-bottom:0px;
 }
 
@@ -50,26 +49,28 @@
 	}
 }
 
-.entry-thumbnail,
+/*.entry-thumbnail,
 .entry-video{
 	margin-bottom:30px;
-}
+}*/
 
 .single .entry-thumbnail:hover img{
 	filter: none;
 	opacity:1;
 }
 
-.entry-title,
-.entry-title a{
-	color: $custom-font-color;
-	text-decoration: none;
-	margin-bottom: 20px;
+.entry-title{
+	margin:40px 0 20px;
 	font-size: 36px;
 	line-height:47px;
 	letter-spacing: -1px;
 	font-weight:bold;
-	transition: color 0.2s ease-out;
+	
+	a{
+		text-decoration: none;
+		transition: color 0.2s ease-out;
+		color: $custom-font-color;
+	}	
 }
 
 /* Quote format */
