@@ -18,20 +18,20 @@
 
 	<?php do_action('balzac_top_main'); ?>
 
-	<main class="main-content  col-1-1" role="main" itemprop="mainContentOfPage">
-
-		<?php
-
-			while (have_posts()) : the_post();
-
-				get_template_part('content', 'page');
-
-			endwhile;
-		?>
-
-		<?php balzac_posts_nav(false, '', '<div class="pagination">', '</div>'); ?>
-
-	</main><!-- END .main-content -->
+		<main class="main-content col-1-1" role="main" itemprop="mainContentOfPage">
+	
+			<?php
+	
+				while (have_posts()) : the_post();
+	
+					get_template_part('content', 'page');
+	
+				endwhile;
+			?>
+	
+			<?php balzac_posts_nav(false, '', '<div class="pagination">', '</div>'); ?>
+	
+		</main><!-- END .main-content -->
 
 	<?php do_action('balzac_bottom_main'); ?>
 

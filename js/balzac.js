@@ -21,7 +21,6 @@ $(function(){
 		$('.entry-video, .widget-video, .entry-content').fitVids();
 
 
-
 		// Hidden sidebar handling
 		$( '#toggle-sidebar-icon' ).click(function(e) {
 			e.preventDefault();

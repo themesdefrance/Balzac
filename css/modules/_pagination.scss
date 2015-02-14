@@ -2,12 +2,12 @@
 	display: block;
 	margin: 20px 0 60px;
 	text-align: center;
-	
+
 	> span,
 	> a,
 	> i.nothere{
 		@extend %custom-bg;
-		
+
 		display: inline-block;
 		color: #fff;
 		background-color:#b2b6bc;
@@ -19,6 +19,7 @@
 		width: 2em;
 		text-align: center;
 		margin: 0 2px;
+		transition: .2s background-color ease-out;
 		i:before{
 			width: auto;
 			height: auto;
@@ -31,19 +32,19 @@
 	font-family: $heading-font;
 	display: inline-block;
 	padding: 4px 10px;
-	
+
 	a{
 		padding: 0 4px;
 		color: inherit;
 		text-decoration: none;
 		transition: .2s opacity ease-out;
 		opacity: .6;
-		
+
 		&:hover{
 			opacity: 1;
 		}
 	}
-	
+
 	.page-links-title{
 		margin-right: 10px;
 	}

@@ -8,14 +8,14 @@ textarea {
 button,
 input,
 select{
-    font-family: inherit;
+    font-family:$heading-font;
     font-size: 100%;
 }
 
 input[type='text'],input[type='email'], input[type='url'], select{
 	max-width:300px;
 	line-height:32px;
-	height:40px;
+	height:30px;
 }
 
 input[type='tel'], input[type='number'], input[type='date']{
@@ -29,7 +29,7 @@ input[type='text'],input[type='email'], input[type='url'], input[type='tel'], in
 	padding: 4px 10px;
 	border: 1px solid transparent;
 	background: #f1f1f1;
-	
+
 	&:focus{
 		border-color: $main-color;
 		box-shadow: 0 0 5px $main-color;

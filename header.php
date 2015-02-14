@@ -42,8 +42,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
 		<header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 
-			<span id="toggle-menu-icon" class="typcn typcn-th-menu"></span>
-
 			<span id="toggle-sidebar-icon" class="typcn typcn-th-menu"></span>
 
 			<nav class="main-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -55,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; ?>
 						'menu_class'     => 'top-level-menu',
 						'container'      => false,
 						'depth'          => 2,
-						'fallback_cb'    => 'balzac_nomenu'
+						'fallback_cb'    => 'tdf_nomenu'
 					));
 					?>
 

@@ -65,18 +65,18 @@
 	line-height:47px;
 	letter-spacing: -1px;
 	font-weight:bold;
-	
+
 	a{
 		text-decoration: none;
 		transition: color 0.2s ease-out;
-		color: $custom-font-color;
-	}	
+		color: $main-color;
+	}
 }
 
 /* Quote format */
 
 .entry-quote{
-	background: $custom-font-color;
+	background: $main-color;
 	margin-bottom:10px;
 	transition:.2s background ease-out;
 	text-align: center;
@@ -125,7 +125,7 @@
 	padding:30px;
 
 	&:hover{
-		background:$custom-font-color;
+		background:$main-color;
 	}
 
 	blockquote{
@@ -139,7 +139,7 @@
 
 .entry-link{
 
-	background: $custom-font-color;
+	background: $main-color;
 	transition:.2s background ease-out;
 	text-align: center;
 
@@ -448,7 +448,6 @@
 			}
 
 			&:hover{
-				background-color: #b2b6bc !important;
 				text-decoration:none;
 
 				&:after{

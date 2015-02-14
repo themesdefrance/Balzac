@@ -16,7 +16,7 @@
 
 <section class="content">
 
-		<?php do_action('balzac_top_main'); ?>
+	<?php do_action('balzac_top_main'); ?>
 
 		<main class="main-content col-1-1" role="main" itemprop="mainContentOfPage">
 
@@ -41,7 +41,7 @@
 
 		</main><!-- END .main-content -->
 
-		<?php do_action('balzac_bottom_main'); ?>
+	<?php do_action('balzac_bottom_main'); ?>
 
 </section><!-- END .content -->
 
