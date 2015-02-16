@@ -47,7 +47,7 @@
 	z-index: $z-menu;
 	width: 100%;
 	border-bottom: 1px solid #ddd;
-
+	
 	@extend %custom-bg;
 	@extend .clearfix;
 
@@ -106,6 +106,7 @@
 		@include width-below($grid-collapse-below){
 			width:100%;
 			padding: 20px 0;
+			text-align: left;
 		}
 
 		a.logo-text{
@@ -131,24 +132,25 @@
 		color:#333;
 		font-size: 32px;
 		padding:0;
-		margin: -2px 0 0 0;
 		cursor:pointer;
 		opacity:1;
-		right:20px;
-		max-height: 36px;
+		right:25px;
+		top:25px;
+		height: 36px;
+		margin-top: -2px;
 		transition: 0.5s all ease-in;
 
 		&:before{
-			padding: 25px 0;
+			vertical-align: text-top;
+			@include width-below($grid-collapse-below){
+				vertical-align: baseline;
+			}
 		}
 
 		&:hover{
 			@extend %custom-color;
 		}
 		
-		@include width-below($grid-collapse-below){
-			padding: 10px 0 0;
-		}
 	}
 }
 
@@ -241,18 +243,11 @@
 }
 
 
-body.admin-bar .site-header{
+body.admin-bar, .admin-bar .sidebar{
 	top: 32px !important;
-}
-
-.menu-toggle{
-	background: none;
-	border: none;
-	font-size: 30px;
-	display: none;
-
-	@include width-below($grid-collapse-below){
-		display: block;
+	
+	@include width-below(782px){
+		top:46px;
 	}
 }
 
@@ -313,7 +308,7 @@ body.admin-bar .site-header{
 		right: 20px;
 		top:20px;
 		transition: all 0.5s;
-
+		
 		&:hover{
 			@extend %custom-color;
 		}
@@ -371,14 +366,6 @@ body.admin-bar .site-header{
 			}
 		}
 	}
-}
-
-.admin-bar .sidebar{
-	top:32px;
-	@include width-below(782px){
-		top:46px;
-	}
-
 }
 
 .footer-wrapper{

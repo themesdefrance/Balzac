@@ -1354,7 +1354,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     @media only screen and (max-width: 769px) {
       .site-header .balzac-logo {
         width: 100%;
-        padding: 20px 0; } }
+        padding: 20px 0;
+        text-align: left; } }
     .site-header .balzac-logo a.logo-text {
       font-size: 32px;
       font-family: 'Open Sans', 'sans-serif';
@@ -1372,17 +1373,18 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     color: #333;
     font-size: 32px;
     padding: 0;
-    margin: -2px 0 0 0;
     cursor: pointer;
     opacity: 1;
-    right: 20px;
-    max-height: 36px;
+    right: 25px;
+    top: 25px;
+    height: 36px;
+    margin-top: -2px;
     transition: 0.5s all ease-in; }
     .site-header #toggle-sidebar-icon:before {
-      padding: 25px 0; }
-    @media only screen and (max-width: 769px) {
-      .site-header #toggle-sidebar-icon {
-        padding: 10px 0 0; } }
+      vertical-align: text-top; }
+      @media only screen and (max-width: 769px) {
+        .site-header #toggle-sidebar-icon:before {
+          vertical-align: baseline; } }
 
 .sidebar-open #toggle-sidebar-icon {
   opacity: 0; }
@@ -1451,17 +1453,11 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       padding-top: 10px;
       padding-left: 15px; } }
 
-body.admin-bar .site-header {
+body.admin-bar, .admin-bar .sidebar {
   top: 32px !important; }
-
-.menu-toggle {
-  background: none;
-  border: none;
-  font-size: 30px;
-  display: none; }
-  @media only screen and (max-width: 769px) {
-    .menu-toggle {
-      display: block; } }
+  @media only screen and (max-width: 782px) {
+    body.admin-bar, .admin-bar .sidebar {
+      top: 46px; } }
 
 .sidebar {
   background-color: #242424;
@@ -1540,12 +1536,6 @@ body.admin-bar .site-header {
           border-top: solid 1px #4e4e4e; }
           .sidebar .main-menu .wrapper ul.top-level-menu .sub-menu li:last-child, .sidebar .main-menu .wrapper-media ul.top-level-menu .sub-menu li:last-child {
             border-bottom: none; }
-
-.admin-bar .sidebar {
-  top: 32px; }
-  @media only screen and (max-width: 782px) {
-    .admin-bar .sidebar {
-      top: 46px; } }
 
 .footer-wrapper {
   font-family: 'Open Sans', 'sans-serif'; }
