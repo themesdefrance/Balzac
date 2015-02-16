@@ -20,11 +20,20 @@
 	overflow:hidden;
 	height: 450px;
 	transition: .2s background ease-out;
+	transition: .2s height ease-out;
 
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position:center;
-
+	
+	@include width-below(960px){
+		height:350px;
+	}
+	
+	@include width-below($grid-collapse-below){
+		height:250px;
+	}
+	
 	.entry-permalink{
 		display: block;
 		position:relative;
@@ -84,7 +93,7 @@
 	a{
 		color:#fff;
 		display:block;
-		padding: 50px 30px 30px;
+		padding: 60px 30px 30px;
 		text-decoration:none;
 		transition:.2s color ease-out;
 	}
@@ -114,7 +123,7 @@
 		font-size:20px;
 
 		a{
-			padding:0 0 50px;
+			padding:0 0 60px;
 
 		}
 	}
@@ -144,7 +153,7 @@
 	text-align: center;
 
 	a{
-		padding:40px 0 50px;
+		padding:60px 0 70px;
 		color:#fff;
 		display: block;
 

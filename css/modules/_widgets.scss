@@ -172,7 +172,42 @@
 	}
 }
 
-// Intro custom widgets
+.widget_nav_menu{
+	ul.menu{
+		li.menu-item{
+			display:block;
+			border-bottom: solid 1px #4e4e4e;
+			margin:0;
+			padding:0;
+			
+			&:last-child{
+				border-bottom:none;
+			}
+			
+			a{
+				display: block;
+				padding: 20px 0px 17px;
+				transition: background 0.2s ease-out;
+				transition: padding 0.2s ease-out;
+				
+				&:hover{
+					@extend %custom-bg;
+					@extend %custom-color;
+					
+					padding-left:10px;
+					text-decoration:none;
+				}
+			}
+		}
+		
+		.sub-menu{
+			padding-left: 20px;
+			border-top: solid 1px #4e4e4e;
+		}	
+	}
+}
+
+// Balzac custom widgets
 
 .widget_balzaccalltoaction{
 
@@ -202,10 +237,12 @@
 			padding:0;
 			margin:0 5px 15px;
 
-			a{
+			a{	
+				@extend %custom-bg;
+				@extend %custom-color;
+				
 				font-size:26px;
 				line-height: 36px;
-				background-color: #f7f7f7;
 				width:40px;
 				height: 40px;
 				border-radius: 25px;
@@ -220,10 +257,6 @@
 			}
 		}
 	}
-}
-
-.widget-video{
-
 }
 
 // Footer widgets (maybe in a future release ?)

@@ -274,11 +274,11 @@ if(!function_exists('balzac_user_styles')){
 			.comment-reply-link,
 			.widget a,
 			.comment-form .logged-in-as a,
-			#sidebar-close:hover,
-			#toggle-sidebar-icon:hover{
+			.sidebar .top-level-menu a{
 				color: <?php echo $color; ?>;
 			}
-
+			
+			#toggle-sidebar-icon:hover,
 			.content a:hover,
 			.footer a:hover,
 			.entry-meta a:hover,
@@ -286,6 +286,7 @@ if(!function_exists('balzac_user_styles')){
 			.entry-footer-meta a:hover,
 			.comment-author a:hover,
 			.comment-reply-link:hover,
+			#sidebar-close:hover,
 			.widget a:hover,
 			.widget_balzacsocial ul li a:hover,
 			.comment-form .logged-in-as a:hover{
@@ -314,6 +315,8 @@ if(!function_exists('balzac_user_styles')){
 			.widget_calendar #next a,
 			.widget_calendar #prev a,
 			.widget_balzaccalltoaction a.button,
+			.widget_nav_menu a:hover,
+			.sidebar .top-level-menu a:hover,
 			.search-form .submit-btn,
 			.entry-quote,
 			.entry-link,
@@ -343,7 +346,12 @@ if(!function_exists('balzac_user_styles')){
 				background-color: <?php echo $complement; ?>;
 				color: <?php echo $contrast; ?>;
 			}
-
+			
+			.widget_balzacsocial a{
+				background-color: <?php echo $contrast; ?>;
+				color: <?php echo $color; ?>;
+			}
+			
 			.widget_tag_cloud a:hover,
 			input[type='text']:focus,
 			input[type='email']:focus,

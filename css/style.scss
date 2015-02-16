@@ -43,8 +43,6 @@
 	max-width: 960px;
 }
 
-$menu-width: 280px;
-
 .site-header{
 	z-index: $z-menu;
 	width: 100%;
@@ -53,49 +51,27 @@ $menu-width: 280px;
 	@extend %custom-bg;
 	@extend .clearfix;
 
-	@include width-below($grid-collapse-below){
-
-	}
-
 	.main-menu{
 		width: 100%;
 		font-family: $heading-font;
 		text-align: center;
 		border-bottom:1px solid #ddd;
-
+		
 		@include width-below($grid-collapse-below){
-			text-align: left;
-			float:none;
-			width:100%;
 			display:none;
 		}
-
+		
 		ul.top-level-menu{
 			list-style: none;
 			z-index: 10;
 			position: relative;
 
-			@include width-below($grid-collapse-below){
-				float:none;
-				display: none;
-				width:100%;
-				overflow:hidden;
-			}
-
-			@include width-above($grid-collapse-below){
-				display: block !important;
-			}
 		}
 
 		li{
 			display: inline-block;
 			position: relative;
 			margin-right: -4px;
-
-			@include width-below($grid-collapse-below){
-				display: block;
-				padding:0;
-			}
 
 			&:last-child {
 				padding-right: 0;
@@ -119,11 +95,8 @@ $menu-width: 280px;
 			text-decoration: none;
 			font-size: 16px;
 
-			@include width-below($grid-collapse-below){
-				display: block;
-				padding: 20px 0px 17px;
-			}
 		}
+		
 	}
 
 	.balzac-logo{
@@ -162,7 +135,6 @@ $menu-width: 280px;
 		cursor:pointer;
 		opacity:1;
 		right:20px;
-		float:right;
 		max-height: 36px;
 		transition: 0.5s all ease-in;
 
@@ -171,7 +143,11 @@ $menu-width: 280px;
 		}
 
 		&:hover{
-			color:$main-color;
+			@extend %custom-color;
+		}
+		
+		@include width-below($grid-collapse-below){
+			padding: 10px 0 0;
 		}
 	}
 }
@@ -188,40 +164,25 @@ $menu-width: 280px;
 	top: 100%;
 	display: none;
 	min-width: 200px;
-	border:1px solid rgba(56, 69, 91, 0.1);
-
-	@include width-below($grid-collapse-below){
-		display: block;
-		position: static;
-		padding-top: 0;
-		border:none;
-		border-left: 2px solid rgba(56, 69, 91, 0.1);
-	}
+	border:1px solid #ddd;
 
 	li{
 		opacity: 1;
+		margin:0;
 		display: inline-block;
 		width: 100%;
-
-		&:hover > a{
-
-		}
-
+		text-align:left;
 	}
 	a{
-		color: $main-color;
-		font-size: 14px;
+		display:block;
+		color: #333;
+		font-size: 16px;
 		padding:12px 10px 14px 10px;
-		transition: .2s color ease-out;
-	}
-}
-.site-header .sub-menu a{
-	@extend %custom-color;
-	font-size: 16px;
-
-	@include width-below($grid-collapse-below){
-		padding-left: 30px;
-		opacity: 1;
+		transition: padding 0.2s ease-out;
+		
+		&:hover{
+			padding-left:20px;
+		}
 	}
 }
 
@@ -354,7 +315,60 @@ body.admin-bar .site-header{
 		transition: all 0.5s;
 
 		&:hover{
-			color:$main-color;
+			@extend %custom-color;
+		}
+	}
+	
+	.main-menu{
+		
+		font-family:$heading-font;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		
+		.wrapper{
+			padding:0;
+			
+			ul.top-level-menu{
+				overflow:hidden;
+				list-style-type:none;
+				
+				li.menu-item{
+					display: block;
+					border-bottom: solid 1px #4e4e4e;
+					margin:0;
+					padding:0;
+					
+					&:last-child{
+						border-top:none;
+					}
+					
+					a{
+						display: block;
+						padding: 20px 0px 17px;
+						font-size: 18px;
+						line-height: 1.6;
+						text-decoration:none;
+						transition: background 0.2s ease-out;
+						transition: padding 0.2s ease-out;
+						
+						&:hover{
+							@extend %custom-bg;
+							@extend %custom-color;
+							
+							padding-left:10px;
+						}
+					}
+				}
+				
+				.sub-menu{
+					padding-left:20px;
+					border-top: solid 1px #4e4e4e;
+					
+					li:last-child{
+						border-bottom:none;
+					}
+				}
+			}
 		}
 	}
 }
