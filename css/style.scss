@@ -120,7 +120,9 @@
 		}
 
 		a.logo-img img{
-			max-height: 35px;
+			@include width-below($grid-collapse-below){
+				max-height: 50px;
+			}
 		}
 	}
 
