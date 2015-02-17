@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @since 1.0
  * @return string
  */
-if (!function_exists('balzac_excerpt')){
-	function balzac_excerpt($length){
+if (!function_exists('tdf_excerpt')){
+	function tdf_excerpt($length){
 		global $post;
 
 		// No excerpt needed

@@ -4,6 +4,10 @@
 	.wrapper{
 		background-color:#f7f7f7;
 		padding:50px;
+		
+		@include width-below($grid-collapse-below){
+			padding:30px;
+		}
 	}
 }
 
@@ -100,7 +104,14 @@
 .comment-aside{
 	float: left;
 	width: 15%;
-
+	
+	@include width-below($grid-collapse-below){
+		float:none;
+		width:100%;
+		text-align: center;
+		margin-bottom:30px;
+	}
+	
 	.avatar{
 		border-radius: 50%;
 		height: 100%;
@@ -110,6 +121,12 @@
 	float: left;
 	width: 85%;
 	padding-left: 20px;
+	
+	@include width-below($grid-collapse-below){
+		float:none;
+		width:100%;
+		padding:0;
+	}
 }
 
 .comment-header{
