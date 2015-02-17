@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Balzac\n"
-"POT-Creation-Date: 2015-01-28 18:53+0100\n"
-"PO-Revision-Date: 2015-02-01 21:09+0100\n"
+"POT-Creation-Date: 2015-02-17 17:00+0100\n"
+"PO-Revision-Date: 2015-02-17 17:00+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x;_ex;_nx;esc_attr_e;esc_attr__;"
 "esc_attr_x;esc_html__;esc_html_e;esc_html_x\n"
 "X-Poedit-Basepath: .\n"
@@ -17,37 +17,37 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../404.php:39
+#: ../404.php:35
 msgid "Oops, there is nothing here..."
 msgstr ""
 
-#: ../404.php:54
+#: ../404.php:52
 #, php-format
 msgid ""
 "The page you requested does not seem to exist. You can go back to <a href="
 "\"%s\">the home page</a> or browse the archives :"
 msgstr ""
 
-#: ../comments.php:25
+#: ../comments.php:27
 #, php-format
 msgid "1 comment was added, add yours."
 msgid_plural "%s comments were added, add yours."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../comments.php:48
+#: ../comments.php:50
 msgid "Previous comments"
 msgstr ""
 
-#: ../comments.php:52
+#: ../comments.php:54
 msgid "Next comments"
 msgstr ""
 
-#: ../comments.php:62
+#: ../comments.php:64
 msgid "Be the first to post a comment."
 msgstr ""
 
-#: ../comments.php:78
+#: ../comments.php:80
 msgid "Comments are closed."
 msgstr ""
 
@@ -55,7 +55,7 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
-#: ../content-footer.php:36
+#: ../content-footer.php:35
 msgid "Pages:"
 msgstr ""
 
@@ -110,14 +110,14 @@ msgid ""
 "\">go back to the homepage</a> and start again."
 msgstr ""
 
-#: ../footer.php:37 ../admin/index.php:63
+#: ../footer.php:27 ../admin/index.php:63
 #, php-format
 msgid ""
 "<strong>%s</strong> - Balzac by <a href=\"https://www.themesdefrance.fr/\" "
 "target=\"_blank\">Themes de France</a>"
 msgstr ""
 
-#: ../footer.php:58
+#: ../footer.php:48
 msgid "Back to the top"
 msgstr ""
 
@@ -134,43 +134,30 @@ msgid "Sidebar"
 msgstr ""
 
 #: ../functions.php:80
-msgid "Add widgets in the sidebar."
+msgid "Add widgets in the hidden right sidebar."
 msgstr ""
 
-#: ../functions.php:88 ../admin/index.php:60
-msgid "Footer"
-msgstr ""
-
-#: ../functions.php:90
-msgid "Add widgets in the footer."
-msgstr ""
-
-#: ../functions.php:129
+#: ../functions.php:119
 msgid "Post width"
 msgstr ""
 
-#: ../functions.php:130
-msgid "Fullpage width"
-msgstr ""
-
-#: ../functions.php:191 ../admin/index.php:14
+#: ../functions.php:184 ../admin/index.php:14
 msgid "Balzac Settings"
 msgstr ""
 
-#: ../functions.php:205
+#: ../functions.php:198
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../functions.php:406
+#: ../functions.php:419
 msgid "Themes de France"
 msgstr ""
 
-#: ../functions.php:431
+#: ../functions.php:444
 #, php-format
 msgid ""
-"To get Balzac support and automatic updates, <a href='%s' "
-"target='__blank'>purchase a licence key on Themes de France</a> | <a "
-"href='%s'>I'm not interested</a>"
+"To get Balzac updates, please enter the licence key that you received by "
+"email on the Balzac options page. | <a href='%s'>I'm not interested</a>"
 msgstr ""
 
 #: ../header-bar.php:23 ../header-bar.php:78
@@ -215,10 +202,6 @@ msgstr ""
 msgid "Search ..."
 msgstr ""
 
-#: ../template-fullwidth.php:15
-msgid "Fullwidth"
-msgstr ""
-
 #: ../admin/EDD_SL_Theme_Updater.php:67
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
@@ -247,12 +230,8 @@ msgstr ""
 
 #: ../admin/index.php:34
 msgid ""
-"Purchase a licence key in order to receive Balzac updates and get access to "
-"support. Then paste it in the field above."
-msgstr ""
-
-#: ../admin/index.php:34
-msgid "Get Balzac updates & support"
+"Enter your licence key in order to receive Balzac updates. You'll find it in "
+"the confirmation email we sent you after your purchase."
 msgstr ""
 
 #: ../admin/index.php:42
@@ -275,6 +254,10 @@ msgstr ""
 
 #: ../admin/index.php:56
 msgid "Display a sidebar on the content's right across your website."
+msgstr ""
+
+#: ../admin/index.php:60
+msgid "Footer"
 msgstr ""
 
 #: ../admin/index.php:61
@@ -308,27 +291,19 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
-#: ../admin/index.php:108
+#: ../admin/index.php:105
 msgid "Any questions on Balzac ? Go to the"
 msgstr ""
 
-#: ../admin/index.php:108
+#: ../admin/index.php:105
 msgid "Themes de France support page."
 msgstr ""
 
-#: ../admin/index.php:112
-msgid "In order to get support, you need to purchase"
-msgstr ""
-
-#: ../admin/index.php:112
-msgid "the full version."
-msgstr ""
-
-#: ../admin/index.php:116
+#: ../admin/index.php:107
 msgid "If you like Balzac, you should"
 msgstr ""
 
-#: ../admin/index.php:116
+#: ../admin/index.php:107
 msgid "follow us on Facebook"
 msgstr ""
 
@@ -348,125 +323,125 @@ msgstr ""
 msgid "Set up the main menu"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:212
+#: ../admin/functions/balzac-functions.php:213
 msgid "Published In"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:214
+#: ../admin/functions/balzac-functions.php:215
 msgid "Previous Post"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:215
+#: ../admin/functions/balzac-functions.php:216
 msgid "Next Post"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:244
+#: ../admin/functions/balzac-functions.php:247
 msgid "Pingback:"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:255
+#: ../admin/functions/balzac-functions.php:258
 msgid "Your comment is waiting for moderation."
-msgstr ""
-
-#: ../admin/functions/balzac-functions.php:265
-#, php-format
-msgid "%s"
-msgstr ""
-
-#: ../admin/functions/balzac-functions.php:265
-#, php-format
-msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
 #: ../admin/functions/balzac-functions.php:268
 #, php-format
+msgid "%s"
+msgstr ""
+
+#: ../admin/functions/balzac-functions.php:268
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#: ../admin/functions/balzac-functions.php:271
+#, php-format
 msgid "Published on %s at %s"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:283
+#: ../admin/functions/balzac-functions.php:286
 msgid "Reply"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:312
+#: ../admin/functions/balzac-functions.php:315
 #, php-format
 msgid "Reply to %s"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:313
+#: ../admin/functions/balzac-functions.php:316
 msgid "Post comment"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:317
 #: ../admin/functions/balzac-functions.php:320
+#: ../admin/functions/balzac-functions.php:323
 msgid "Name"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:320
-#: ../admin/functions/balzac-functions.php:327
+#: ../admin/functions/balzac-functions.php:323
+#: ../admin/functions/balzac-functions.php:330
 msgid "required"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:324
 #: ../admin/functions/balzac-functions.php:327
+#: ../admin/functions/balzac-functions.php:330
 msgid "Email"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:330
 #: ../admin/functions/balzac-functions.php:333
+#: ../admin/functions/balzac-functions.php:336
 msgid "Website"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:336
+#: ../admin/functions/balzac-functions.php:339
 msgid "Comment"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:365
+#: ../admin/functions/balzac-functions.php:368
 msgid "There is no archives to display."
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:413
+#: ../admin/functions/balzac-functions.php:416
 msgid "Your browser is <em>too old !"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:413
+#: ../admin/functions/balzac-functions.php:416
 msgid "Update your browser"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:413
+#: ../admin/functions/balzac-functions.php:416
 msgid "or"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:413
+#: ../admin/functions/balzac-functions.php:416
 msgid "Install Google Chrome Frame"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:413
+#: ../admin/functions/balzac-functions.php:416
 msgid "to display this website correctly"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:434
+#: ../admin/functions/balzac-functions.php:451
 msgid "Balzac bbPress Addon"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:443
+#: ../admin/functions/balzac-functions.php:460
 msgid ""
 "Balzac bbPress Addon bring custom CSS styling to Balzac to get a perfect "
 "bbPress integration."
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:447
+#: ../admin/functions/balzac-functions.php:464
 msgid "Get Balzac bbPress Addon"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:454
+#: ../admin/functions/balzac-functions.php:471
 msgid "Balzac bbPress Addon is installed. Thanks for using it !"
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:456
+#: ../admin/functions/balzac-functions.php:473
 msgid "If you have some time, help us to improve it by giving some feedback."
 msgstr ""
 
-#: ../admin/functions/balzac-functions.php:460
+#: ../admin/functions/balzac-functions.php:477
 msgid "Give feedback on Balzac bbPress Addon"
 msgstr ""
 

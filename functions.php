@@ -438,10 +438,10 @@ if(!function_exists('balzac_admin_notice')){
 
 			if(!get_option('balzac_license_status')){
 
-				if ( ! get_user_meta($user_id, 'ignore_purchasebalzac_notice') ) {
+				if ( ! get_user_meta($user_id, 'ignore_licensebalzac_notice') ) {
 					echo '<div class="error"><p>';
 
-						printf(__("To get Balzac support and automatic updates, <a href='%s' target='__blank'>purchase a licence key on Themes de France</a> | <a href='%s'>I'm not interested</a>", 'balzac'), 'https://www.themesdefrance.fr/themes/balzac/#acheter?utm_source=theme&utm_medium=noticelink&utm_campaign=balzac', '?ignore_notice=purchasebalzac');
+						printf(__("To get Balzac updates, please enter the licence key that you received by email on the Balzac options page. | <a href='%s'>I'm not interested</a>", 'balzac'), '?ignore_notice=licensebalzac');
 
 					echo '</p></div>';
 				}
@@ -450,3 +450,22 @@ if(!function_exists('balzac_admin_notice')){
 	}
 }
 add_action('admin_notices', 'balzac_admin_notice');
+
+/**
+ * Hide admin notice if the user isn't interested by Balzac updates
+ *
+ * @since 1.0
+ * @return void
+ */
+if(!function_exists('balzac_admin_ignore')){
+	function balzac_admin_ignore() {
+	
+	    global $current_user;
+        $user_id = $current_user->ID;
+        /* If user clicks to ignore the notice, add that to their user meta */
+        if ( isset($_GET['ignore_notice']) && 'licensebalzac' == $_GET['ignore_notice'] ) {
+             add_user_meta($user_id, 'ignore_licensebalzac_notice', 'true', true);
+	    }
+	}
+}
+add_action('admin_init', 'balzac_admin_ignore');

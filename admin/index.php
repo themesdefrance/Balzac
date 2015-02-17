@@ -101,18 +101,9 @@ $form->render();
 ?>
 
 <div style="margin-top:20px;">
-	<?php $status = get_option('balzac_license_status'); ?>
-
-	<?php if($status):
-
-			_e('Any questions on Balzac ? Go to the','balzac'); ?> <a href="https://www.themesdefrance.fr/support/?utm_source=theme&utm_medium=supportlink&utm_campaign=balzac" target="_blank"><?php _e('Themes de France support page.','balzac'); ?></a>
-
-	<?php else:
-
-			_e('In order to get support, you need to purchase','balzac'); ?> <a href="https://www.themesdefrance.fr/themes/balzac/#acheter?utm_source=theme&utm_medium=supportlink&utm_campaign=balzac" target="_blank"><?php _e('the full version.','balzac'); ?></a>
-
-	<?php endif;
-
-		 _e('If you like Balzac, you should','balzac'); ?>, <a href="https://www.facebook.com/ThemesDeFrance" target="_blank"><?php _e('follow us on Facebook','balzac'); ?></a>.
+	<?php
+		_e('Any questions on Balzac ? Go to the','balzac'); ?> <a href="https://www.themesdefrance.fr/support/?utm_source=theme&utm_medium=supportlink&utm_campaign=balzac" target="_blank"><?php _e('Themes de France support page.','balzac'); ?></a>
+	<?php
+		 _e('If you like Balzac, you should','balzac'); ?> <a href="https://www.facebook.com/ThemesDeFrance" target="_blank"><?php _e('follow us on Facebook','balzac'); ?></a>.
 
 </div>

@@ -425,7 +425,7 @@ add_action('balzac_body_top','tdf_chromeframe_notice');
  * @since 1.0
  * @return void
  */
-if(!function_exists('tdf_chromeframe_notice')){
+if(!function_exists('tdf_hide_tinymce_h1_tag')){
 	function tdf_hide_tinymce_h1_tag($arr){
 	    $arr['block_formats'] = 'Paragraph=p;Pre=pre;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6';
 	    return $arr;
@@ -488,4 +488,4 @@ if(!function_exists('balzac_addons_bbpress')){
 
 	}
 }
-//add_action('balzac_addons_tab', 'balzac_addons_bbpress', 10, 1);
+add_action('balzac_addons_tab', 'balzac_addons_bbpress', 10, 1);
