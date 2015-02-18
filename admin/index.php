@@ -37,7 +37,7 @@ $form->startWrapper('tab', 'general');
 		$form->setting(array('type'=>'color',
 					 'name'=>'color',
 					 'options'=>array(
-					 	'default'=>'#ff625b'
+					 	'default'=>'#3ab2a0'
 					 ),
 					 'label'=>__("Main color", 'balzac'),
 					 'description'=>__('This color will be used across your website for buttons, links, etc.', 'balzac')));

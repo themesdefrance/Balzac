@@ -16,21 +16,21 @@
 	
 	<?php do_action('balzac_top_page'); ?>
 	
+	<?php if (has_post_thumbnail() && !post_password_required()): ?>
+
+		<div class="entry-thumbnail" style='background-image: url(<?php echo balzac_get_post_thumbnail_url(); ?>)'>
+
+			<?php //the_post_thumbnail(); ?>
+
+		</div><!--END .entry-thumbnail-->
+
+	<?php endif; ?>
+	
 	<div class="wrapper">
 	
 		<header class="entry-header" >
 			
 			<?php do_action('balzac_top_header_page'); ?>
-						
-			<?php if (has_post_thumbnail() && !post_password_required()): ?>
-			
-				<div class="entry-thumbnail">
-	
-					<?php balzac_post_thumbnail(); ?>
-						
-				</div><!--END .entry-thumbnail-->
-				
-			<?php endif; ?>
 				
 				<h1 class="entry-title" itemprop="headline">
 

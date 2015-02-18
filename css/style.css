@@ -3,7 +3,7 @@ Theme Name: Balzac
 Theme URI: https://github.com/themesdefrance/Balzac
 Author: Themes de France
 Author URI: https://www.themesdefrance.fr
-Description:
+Description: Balzac est un thème WordPress en une colonne pour écrivains, auteurs, blogueurs et autres amoureux des mots. Vous pourrez illustrer vos articles avec de grandes images, des vidéos ou des citations de grands personnages. Laissez ensuite emporter par votre plume dans l'éditeur visuel et partagez vos textes avec le monde entier! Merci à vous d'utiliser Balzac :)
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1710,7 +1710,7 @@ body.admin-bar, .admin-bar .sidebar {
       padding: 0 0 60px; }
 
 .single .entry-quote {
-  padding: 30px; }
+  padding: 60px 30px; }
   .single .entry-quote:hover {
     background: #3ab2a0; }
   .single .entry-quote blockquote {

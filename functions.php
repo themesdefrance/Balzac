@@ -148,8 +148,6 @@ add_action( 'load-post-new.php', 'balzac_custom_format' );
 if (!function_exists('balzac_enqueue')){
 	function balzac_enqueue(){
 
-		$theme = wp_get_theme();
-
 		wp_register_script('fitvids', get_template_directory_uri().'/js/min/jquery.fitvids.min.js', array('jquery'), false, true);
 
 		wp_register_script('balzac', get_template_directory_uri().'/js/min/balzac.min.js', array('jquery'), false, true);
@@ -237,6 +235,8 @@ if(!function_exists('balzac_user_styles')){
 			require_once 'admin/functions/color-functions.php';
 
 			$hsl = balzac_RGBToHSL(balzac_HTMLToRGB($color));
+			$custombg = balzac_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness, 0.35);
+			
 			if ($hsl->lightness > 180){
 				$contrast = apply_filters('balzac_color_contrast', '#333');
 			}
@@ -249,9 +249,10 @@ if(!function_exists('balzac_user_styles')){
 		}
 		else{
 			// If not, use the default colors
-			$color = '#27ae60';
-			$complement = '#1C7E46';
+			$color = '#3ab2a0';
+			$complement = '#2B8577';
 			$contrast = '#fff';
+			$custombg = 'rgba(58,178,160,0.35)';
 		}
 		?>
 			<style type="text/css">
@@ -365,18 +366,12 @@ if(!function_exists('balzac_user_styles')){
 				box-shadow: 0 0 5px <?php echo $color; ?>;
 			}
 
-			<?php
-			// Get custom background color with opacity
-			$hsl = balzac_RGBToHSL(balzac_HTMLToRGB($color));
-			$custombg = balzac_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness, 0.35);
-			?>
-
 			.entry-thumbnail a.entry-permalink:hover{
 				background-color: <?php echo $custombg; ?>;
 			}
 
 			</style>
-		<?php }
+<?php }
 }
 add_action('wp_head','balzac_user_styles', 98);
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Balzac\n"
 "POT-Creation-Date: 2015-02-18 14:30+0100\n"
-"PO-Revision-Date: 2015-02-18 14:30+0100\n"
+"PO-Revision-Date: 2015-02-18 14:39+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: fr_FR\n"
@@ -188,7 +188,7 @@ msgstr "Résultats de recherche pour : %s"
 #: ../header-archive.php:44
 #, php-format
 msgid "Posts from %s"
-msgstr "Articles de %s"
+msgstr "Articles rédigés par %s"
 
 #: ../header-archive.php:51 ../header-bar.php:58
 msgid "Archives from "

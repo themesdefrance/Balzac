@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the header bar (between the header and the main content)
+ * The template for displaying the header archive titles
  *
  * @package Balzac
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License

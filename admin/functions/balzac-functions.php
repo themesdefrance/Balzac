@@ -66,8 +66,8 @@ if (!function_exists('balzac_is_paginated_post')){
  * @since 1.0
  * @return void
  */
-if (!function_exists('balzac_nomenu')){
-	function balzac_nomenu(){
+if (!function_exists('tdf_nomenu')){
+	function tdf_nomenu(){
 		echo '<ul class="top-level-menu"><li><a href="'.admin_url('nav-menus.php').'">'.__('Set up the main menu', 'balzac').'</a></li></ul>';
 	}
 }

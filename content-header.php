@@ -6,18 +6,16 @@
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @since 1.0
  */
-?>
 
-<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-<?php
-	$post_header_date     = apply_filters('balzac_post_header_date', true);
-	$post_header_author   = apply_filters('balzac_post_header_author', true);
-	$post_header_category = apply_filters('balzac_post_header_category', true);
-	$post_header_comments = apply_filters('balzac_post_header_comments', true);
-?>
+$post_header_date     = apply_filters('balzac_post_header_date', true);
+$post_header_author   = apply_filters('balzac_post_header_author', false);
+$post_header_category = apply_filters('balzac_post_header_category', true);
+$post_header_comments = apply_filters('balzac_post_header_comments', true);
 
-<?php if(!is_page()): ?>
+
+if(!is_page()): ?>
 
 	<div class="entry-meta" >
 
