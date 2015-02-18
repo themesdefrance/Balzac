@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Balzac\n"
-"POT-Creation-Date: 2015-02-17 16:57+0100\n"
-"PO-Revision-Date: 2015-02-17 17:00+0100\n"
+"POT-Creation-Date: 2015-02-18 14:30+0100\n"
+"PO-Revision-Date: 2015-02-18 14:30+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: fr_FR\n"
@@ -27,7 +27,7 @@ msgid ""
 "The page you requested does not seem to exist. You can go back to <a href="
 "\"%s\">the home page</a> or browse the archives :"
 msgstr ""
-"La page que vous demander semble ne pas exister. Vous pouvez revenir à <a "
+"La page que vous demandez semble ne pas exister. Vous pouvez revenir à <a "
 "href=\"%s\">la page d'accueil</a> ou parcourir les archives :"
 
 #: ../comments.php:27
@@ -172,39 +172,45 @@ msgstr ""
 "clé de licence que vous avez reçue par email dans les options de Balzac | <a "
 "href='%s'>Je ne suis pas intéressé</a>"
 
-#: ../header-bar.php:23 ../header-bar.php:78
-msgid "Blog"
-msgstr "Blog"
-
-#: ../header-bar.php:32
+#: ../header-archive.php:24 ../header-bar.php:32
 msgid "Posts from "
 msgstr "Articles classés dans "
 
-#: ../header-bar.php:38
+#: ../header-archive.php:30 ../header-bar.php:38
 msgid "Posts tagged by "
 msgstr "Articles identifiés par "
 
-#: ../header-bar.php:44
+#: ../header-archive.php:36 ../header-bar.php:44
 #, php-format
 msgid "Search results for : %s"
 msgstr "Résultats de recherche pour : %s"
+
+#: ../header-archive.php:44
+#, php-format
+msgid "Posts from %s"
+msgstr "Articles de %s"
+
+#: ../header-archive.php:51 ../header-bar.php:58
+msgid "Archives from "
+msgstr "Archives de "
+
+#: ../header-archive.php:55 ../header-archive.php:59 ../header-bar.php:62
+#: ../header-bar.php:66
+msgid "Archives for "
+msgstr "Archives pour "
+
+#: ../header-archive.php:63 ../header-bar.php:70
+msgid "Archives"
+msgstr "Archives"
+
+#: ../header-bar.php:23 ../header-bar.php:78
+msgid "Blog"
+msgstr "Blog"
 
 #: ../header-bar.php:52
 #, php-format
 msgid "About %s"
 msgstr "À propos de %s"
-
-#: ../header-bar.php:58
-msgid "Archives from "
-msgstr "Archives de "
-
-#: ../header-bar.php:62 ../header-bar.php:66
-msgid "Archives for "
-msgstr "Archives pour "
-
-#: ../header-bar.php:70
-msgid "Archives"
-msgstr "Archives"
 
 #: ../searchform.php:15 ../searchform.php:17
 msgid "Search for:"

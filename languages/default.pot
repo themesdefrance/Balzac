@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Balzac\n"
-"POT-Creation-Date: 2015-02-17 17:00+0100\n"
-"PO-Revision-Date: 2015-02-17 17:00+0100\n"
+"POT-Creation-Date: 2015-02-18 14:31+0100\n"
+"PO-Revision-Date: 2015-02-18 14:31+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: en_US\n"
@@ -160,38 +160,44 @@ msgid ""
 "email on the Balzac options page. | <a href='%s'>I'm not interested</a>"
 msgstr ""
 
-#: ../header-bar.php:23 ../header-bar.php:78
-msgid "Blog"
-msgstr ""
-
-#: ../header-bar.php:32
+#: ../header-archive.php:24 ../header-bar.php:32
 msgid "Posts from "
 msgstr ""
 
-#: ../header-bar.php:38
+#: ../header-archive.php:30 ../header-bar.php:38
 msgid "Posts tagged by "
 msgstr ""
 
-#: ../header-bar.php:44
+#: ../header-archive.php:36 ../header-bar.php:44
 #, php-format
 msgid "Search results for : %s"
+msgstr ""
+
+#: ../header-archive.php:44
+#, php-format
+msgid "Posts from %s"
+msgstr ""
+
+#: ../header-archive.php:51 ../header-bar.php:58
+msgid "Archives from "
+msgstr ""
+
+#: ../header-archive.php:55 ../header-archive.php:59 ../header-bar.php:62
+#: ../header-bar.php:66
+msgid "Archives for "
+msgstr ""
+
+#: ../header-archive.php:63 ../header-bar.php:70
+msgid "Archives"
+msgstr ""
+
+#: ../header-bar.php:23 ../header-bar.php:78
+msgid "Blog"
 msgstr ""
 
 #: ../header-bar.php:52
 #, php-format
 msgid "About %s"
-msgstr ""
-
-#: ../header-bar.php:58
-msgid "Archives from "
-msgstr ""
-
-#: ../header-bar.php:62 ../header-bar.php:66
-msgid "Archives for "
-msgstr ""
-
-#: ../header-bar.php:70
-msgid "Archives"
 msgstr ""
 
 #: ../searchform.php:15 ../searchform.php:17

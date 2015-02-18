@@ -1386,6 +1386,14 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       @media only screen and (max-width: 769px) {
         .site-header #toggle-sidebar-icon:before {
           vertical-align: baseline; } }
+  .site-header .header-archive {
+    text-align: center;
+    padding-bottom: 50px; }
+    .site-header .header-archive .archive-title {
+      font-size: 36px;
+      line-height: 47px;
+      letter-spacing: -1px;
+      font-weight: bold; }
 
 .sidebar-open #toggle-sidebar-icon {
   opacity: 0; }
@@ -1666,7 +1674,9 @@ body.admin-bar, .admin-bar .sidebar {
   font-size: 36px;
   line-height: 47px;
   letter-spacing: -1px;
-  font-weight: bold; }
+  font-weight: bold;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
   .entry-title a {
     text-decoration: none;
     transition: color 0.2s ease-out;
@@ -2069,7 +2079,9 @@ body.admin-bar, .admin-bar .sidebar {
 
 .comment-content {
   font-size: 16px;
-  line-height: 1.6; }
+  line-height: 1.6;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
 
 .comment-footer {
   margin-top: 10px; }

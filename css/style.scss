@@ -154,6 +154,19 @@
 		}
 		
 	}
+	
+	.header-archive{
+		text-align: center;
+		padding-bottom: 50px;
+		
+		.archive-title{
+			font-size: 36px;
+			line-height:47px;
+			letter-spacing: -1px;
+			font-weight:bold;
+		}
+	}
+	
 }
 
 .sidebar-open #toggle-sidebar-icon{

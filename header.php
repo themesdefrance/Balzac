@@ -63,23 +63,62 @@ if ( ! defined( 'ABSPATH' ) ) exit; ?>
 			<div class="balzac-logo">
 
 				<div class="wrapper">
-
-					<?php if(get_option('balzac_logo')) : ?>
-
-						<a href="<?php echo home_url(); ?>" class="logo-img">
-							<img src="<?php echo esc_url(get_option('balzac_logo')); ?>" alt="<?php echo esc_attr(bloginfo('name')); ?>">
-						</a>
-
-					<?php else: ?>
-
-						<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>" class="logo-text">
-							<?php echo esc_attr(bloginfo('name')); ?>
-						</a>
+					
+					<?php if(get_option('balzac_logo')) :
+						
+						if ( is_front_page() && is_home() ) : ?>
+						
+						<h1 class="site-title">
+							<a href="<?php echo home_url(); ?>" class="logo-img" title="">
+								<img src="<?php echo esc_url(get_option('balzac_logo')); ?>" alt="<?php echo esc_attr(bloginfo('name')); ?>">
+							</a>
+						</h1>
+						
+						<?php else: ?>
+						
+						<p  class="site-title">
+							<a href="<?php echo home_url(); ?>" class="logo-img">
+								<img src="<?php echo esc_url(get_option('balzac_logo')); ?>" alt="<?php echo esc_attr(bloginfo('name')); ?>">
+							</a>
+						</p>
+						<?php endif;
+							
+					else: 
+						
+						if ( is_front_page() && is_home() ) : ?>
+						
+							<h1 class="site-title">
+								<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>" class="logo-text">
+									<?php echo esc_attr(bloginfo('name')); ?>
+								</a>
+							</h1>
+						<?php else: ?>
+						
+							<p class="site-title">
+								<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr(bloginfo('name')); ?>" class="logo-text">
+									<?php echo esc_attr(bloginfo('name')); ?>
+								</a>
+							</p>
+							
+						<?php endif;
+						
+						// Display the blog description
+						$description = get_bloginfo( 'description', 'display' );
+						if ( $description ) : ?>
+							<p class="site-description"><?php echo $description; ?></p>
+						<?php endif; ?>
+						
 
 					<?php endif; ?>
 
 				</div><!--END .wrapper-->
 
 			</div><!--END .balzac-logo-->
+			
+			<?php
+				if(is_archive()):
+					get_template_part('header', 'archive');
+				endif;
+			?>
 
 		</header><!--END .site-header-->
