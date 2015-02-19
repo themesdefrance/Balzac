@@ -1120,13 +1120,13 @@ textarea {
   font-size: 100%; }
 
 button, input, select {
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: 'PT Serif', 'sans-serif';
   font-size: 100%; }
 
 input[type='text'], input[type='email'], input[type='url'], select {
   max-width: 300px;
   line-height: 32px;
-  height: 30px; }
+  height: 40px; }
 
 input[type='tel'], input[type='number'], input[type='date'] {
   max-width: 170px;
@@ -1409,7 +1409,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   right: 0;
   top: 100%;
   display: none;
-  min-width: 200px;
+  min-width: 220px;
   border: 1px solid #ddd; }
   .site-header .sub-menu li {
     opacity: 1;
@@ -2005,12 +2005,13 @@ body.admin-bar, .admin-bar .sidebar {
   font-weight: bold; }
 
 .comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"] {
+  font-family: 'Open Sans', 'sans-serif';
   position: relative;
   width: 100%;
   max-width: none;
   line-height: 1.6;
   padding: 10px 15px;
-  color: #bbbbbb;
+  color: #777;
   background: #fdfdfd;
   border: none; }
 
@@ -2021,7 +2022,7 @@ body.admin-bar, .admin-bar .sidebar {
   position: relative;
   z-index: 100;
   width: 100%;
-  color: #bbbbbb;
+  color: #777;
   background: #fdfdfd;
   border: none;
   margin: 0;
@@ -2321,3 +2322,16 @@ body.admin-bar, .admin-bar .sidebar {
       opacity: 1; }
   .post-pagination .page-links-title {
     margin-right: 10px; }
+
+/* Cocorico Social */
+.coco-social {
+  font-family: 'Open Sans', 'sans-serif';
+  text-align: center; }
+  .coco-social ul.coco-social-buttons li {
+    display: inline-block;
+    float: none; }
+
+/* Cocorico Shortcodes */
+.cs_separator hr {
+  border-top-color: #777 !important;
+  border-bottom: none !important; }

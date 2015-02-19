@@ -1,0 +1,20 @@
+/* Cocorico Social */
+
+.coco-social{
+	font-family: $heading-font;
+	text-align:center;
+	
+	ul.coco-social-buttons li{
+		display:inline-block;
+		float:none;
+	}
+}
+
+/* Cocorico Shortcodes */
+
+.cs_separator{
+	hr{
+		border-top-color:#777 !important;
+		border-bottom:none !important;
+	}
+}

@@ -35,12 +35,13 @@
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"]{
+	font-family:$heading-font;
 	position: relative;
 	width: 100%;
 	max-width:none;
 	line-height:1.6;
 	padding: 10px 15px;
-	color:#bbbbbb;
+	color:#777;
 	background: #fdfdfd;
 	border: none;
 }
@@ -51,7 +52,7 @@
 	position: relative;
 	z-index: 100;
 	width: 100%;
-	color:#bbbbbb;
+	color:#777;
 	background: #fdfdfd;
 	border: none;
 	margin:0;

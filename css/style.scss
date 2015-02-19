@@ -79,6 +79,7 @@
 
 			&:hover {
 				> a{
+					@extend %custom-color;
 					color:$main-color;
 				}
 
@@ -180,7 +181,7 @@
 	right: 0;
 	top: 100%;
 	display: none;
-	min-width: 200px;
+	min-width: 220px;
 	border:1px solid #ddd;
 
 	li{
@@ -447,3 +448,4 @@ body.admin-bar, .admin-bar .sidebar{
 @import "modules/comments";
 @import "modules/widgets";
 @import "modules/pagination";
+@import "modules/plugins";
