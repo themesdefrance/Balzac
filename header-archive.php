@@ -60,7 +60,7 @@
 						the_time('Y');
 					}
 					else{
-						_e('Archives', 'balzac');
+						echo apply_filters('balzac_header_archive_title', __('Archives', 'balzac'));
 					}
 					?>
 			
