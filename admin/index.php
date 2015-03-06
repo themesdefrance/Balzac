@@ -47,14 +47,6 @@ $form->startWrapper('tab', 'general');
 					 'label'=>__('Logo', 'balzac'),
 					 'description'=>__("Upload a logo to display in the header (if you don't have a logo, the name of your website will be displayed instead).", 'balzac')));
 
-		$form->setting(array('type'=>'boolean',
-					 'name'=>'show_sidebar',
-					 'options'=>array(
-					 	'default'=>true
-					 ),
-					 'label'=>__("Sidebar", 'balzac'),
-					 'description'=>__("Display a sidebar on the content's right across your website.", 'balzac')));
-
 		$form->setting(array('type'=>'textarea',
 					 'name'=>'footer_left',
 					 'label'=>__("Footer", 'balzac'),

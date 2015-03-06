@@ -6,9 +6,8 @@
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @since 1.0
  */
-?>
 
-<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
+if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
 			<section class="footer-wrapper">
 
@@ -52,7 +51,7 @@
 	</div> <!-- END .page-wrapper -->
 
 	<?php get_sidebar(); ?>
-
+	
 	<?php wp_footer(); ?>
 
 </body>
