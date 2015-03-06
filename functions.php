@@ -275,7 +275,8 @@ if(!function_exists('balzac_user_styles')){
 			.comment-reply-link,
 			.widget a,
 			.comment-form .logged-in-as a,
-			.sidebar .top-level-menu a{
+			.sidebar .top-level-menu a,
+			.footer-wrapper .site-footer a{
 				color: <?php echo $color; ?>;
 			}
 			
@@ -290,7 +291,8 @@ if(!function_exists('balzac_user_styles')){
 			#sidebar-close:hover,
 			.widget a:hover,
 			.widget_balzacsocial ul li a:hover,
-			.comment-form .logged-in-as a:hover{
+			.comment-form .logged-in-as a:hover,
+			.footer-wrapper .site-footer a:hover{
 				color: <?php echo $complement; ?>;
 			}
 
