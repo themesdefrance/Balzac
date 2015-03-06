@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Define theme constants (relative to licensing)
 define('BALZAC_STORE_URL', 'https://www.themesdefrance.fr');
 define('BALZAC_THEME_NAME', 'Balzac');
-define('BALZAC_THEME_VERSION', '1.0.0');
+define('BALZAC_THEME_VERSION', '1.0.1');
 define('BALZAC_LICENSE_KEY', 'balzac_license_edd');
 
 //Set the content width (in pixels) based on the theme's design and stylesheet.
