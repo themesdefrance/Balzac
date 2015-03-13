@@ -38,9 +38,8 @@ if (!defined('COCORICO_PATH')){
 $localCocoPath = dirname(__FILE__);
 
 $cocoExtensions = glob($localCocoPath.'/extensions/*', GLOB_ONLYDIR);
-if (!is_array($cocoExtensions)) $cocoExtensions;
+if (!is_array($cocoExtensions)) $cocoExtensions = array();
 foreach ($cocoExtensions as $extension){
-	
 	$extensionFiles = glob($extension.'/*.php');
 	if (!$extensionFiles) $extensionFiles = array();
 	foreach ($extensionFiles as $file){

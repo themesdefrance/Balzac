@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; ?>
 									echo strip_tags(get_option("balzac_footer_left"), '<strong><a><em><img>');
 
 								else:
-									printf(__('<strong>%s</strong> - Balzac by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'balzac'),date('Y'));
+									printf(__('<strong>%s</strong> - Balzac by <a href="https://www.themesdefrance.fr/" target="_blank" rel="nofollow">Themes de France</a>', 'balzac'),date('Y'));
 								endif;
 							 ?>
 						</div><!-- END .footnote -->
