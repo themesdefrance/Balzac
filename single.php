@@ -28,7 +28,7 @@
 
 					balzac_single_post_nav();
 
-					comments_template();
+					if(comments_open()) comments_template();
 
 				endwhile;
 			?>
